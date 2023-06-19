@@ -1,0 +1,20 @@
+Redirect 301 /quickguidetropos-5-howto-install-sds-v0-9-0/ https://stratosmining.info/howto-install-stratos-sds-node/
+Redirect 301 /stratos-ama-xt-bin-zhu-21-04-2022/ https://stratosmining.info/stratos-ama-xt-21-04-2022/
+Redirect 301 /errorfix-error-during-handshake-error-on-replay-wrong-block-header-apphash/ https://stratosmining.info/stratos-validator-handshake-error-replay-wrong-block/
+Redirect 301 /how-to-setup-a-stratos-full-chain-and-validator-node-on-ubuntu-18-04/ https://stratosmining.info/howto-install-stratos-full-chain-validator-node/
+Redirect 301 /stratos-ama-on-twitter-spaces-10-feb-2023/ https://stratosmining.info/stratos-ama-twitter-spaces-10-02-2023/
+Redirect 301 /errorfix-stopping-peer-for-error-erreof/ https://stratosmining.info/stratos-validator-stopping-peer-error-eof/
+Redirect 301 /errorfix-socket-too-many-open-files/ https://stratosmining.info/stratos-validator-socket-too-many-open-files/
+Redirect 301 /script-gather-test-tokens-by-auto-claiming-the-faucet-every-hour/ https://stratosmining.info/automatically-claim-faucet-tropos-5/
+Redirect 301 /script-automatically-generate-files-and-upload-them-to-sds-network/ https://stratosmining.info/automatically-generate-and-upload-files-to-sds-network/
+Redirect 301 /errorfix-this-node-is-suspended-due-to-bad-performance/ https://stratosmining.info/sds-node-suspended-bad-performance/
+Redirect 301 /howto-upload-and-download-files-from-sds-network/ https://stratosmining.info/howto-upload-download-files-from-stratos-sds/
+Redirect 301 /errorfix-full-chain-node-validator-is-jailed-and-or-unbonded/ https://stratosmining.info/stratos-validator-jailed-unbonded/
+# Redirect www to non-www (and HTTPS)
+RewriteCond %{HTTP_HOST} ^www\.(.+?)\.?$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# Redirect HTTP to HTTPS (already non-www)
+RewriteCond %{HTTPS} off 
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+

@@ -1,0 +1,104 @@
+site_name: Stratos Mining Resources
+site_url: https://stratosmining.info
+theme:
+  name: material
+  custom_dir: overrides
+  font:
+   text: Exo
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+
+  features:
+  #  - navigation.tabs
+  #  - navigation.tabs.sticky
+    - navigation.sections
+  #  - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.share
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - pymdownx.superfences
+
+  language: en
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: teal
+
+extra:
+  social:
+    - icon: fontawesome/brands/chrome
+      link: https://thestratos.org
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/StratosCommunity
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/tpQGpC2nMh
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/Stratos_Network
+    - icon: fontawesome/brands/medium
+      link: https://stratos-network.medium.com/
+  analytics:
+    provider: google
+    property: G-QZQEZDBDFN
+
+markdown_extensions:
+  - toc:
+      permalink: "🔗&#xFE0E;"
+      title: On this page
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - admonition
+  - meta
+
+plugins:
+  - search
+  - social
+
+nav:
+  - Welcome: index.md
+  - About:
+    - What is Stratos?: what-is-stratos-crypto.md
+    - Current Status: stratos-current-status.md
+    - Frequently Asked Questions: stratos-frequently-asked-questions.md
+    - Stratos Mining Nodes: stratos-mining-nodes.md
+    - Mining Starting Point: mining-starting-point.md
+  - HowTo:
+    - Setup a SDS Node: howto-install-stratos-sds-node.md
+    - Setup a Full-Chain Node: howto-install-stratos-full-chain-validator-node.md
+    - Upload and Download from SDS: howto-upload-download-files-from-stratos-sds.md
+    - Drive Pooling and Data Backup: drive-pooling-data-backup.md
+  - Tips and Tricks:
+    - Auto Upload Files to SDS: automatically-generate-and-upload-files-to-sds-network.md
+    - Auto Claim Faucet: automatically-claim-faucet-tropos-5.md
+    - Run a Node in Windows: howto-run-a-stratos-sds-node-in-windows-with-virtualbox.md
+  - Possible Errors:
+    - SDS Node is Suspended: sds-node-suspended-bad-performance.md
+    - Validator is Jailed: stratos-validator-jailed-unbonded.md
+    - Wrong Block Header AppHash: stratos-validator-handshake-error-replay-wrong-block.md
+    - Stopping Peer for Error EOF: stratos-validator-stopping-peer-error-eof.md
+    - Socket Too Many Open files: stratos-validator-socket-too-many-open-files.md
+  - Community:
+    - AMA on Twitter 10.02.2023: stratos-ama-twitter-spaces-10-02-2023.md
+    - AMA on XT 21.04.2022: stratos-ama-xt-21-04-2022.md
+
+extra_css:
+  - css/extra.css     
+
