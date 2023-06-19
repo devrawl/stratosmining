@@ -4,7 +4,7 @@ author: DevRawl
 description: Stratos Decentralized Network current status and roadmap. List of completed and upcoming tasks.
 ---
 
-<small> Last update: March 19, 2023</small>
+<small> Last update: June 19, 2023</small>
 
 ### Roadmap
 
@@ -16,7 +16,7 @@ description: Stratos Decentralized Network current status and roadmap. List of c
 | Mar 2022 | Stratos Incentive Testnet Tropos-2 | <g>Completed</g> |
 | Apr 2022 | Stratos Incentive Testnet Tropos-3 | <g>Completed</g> |
 | Jul 2022 | Stratos Incentive Testnet Tropos-4 | <g>Completed</g> |
-| Jan 2023 | Stratos Incentive Testnet Tropos-5 | <o>In Progress</o> |
+| Jan 2023 | Stratos Incentive Testnet Tropos-5 | <g>Completed</g> |
 | Mar 2023 | Security audit with BlockSec | <o>In Progress</o> |
 | TBA | Stratos Blockchain Mainnet | <gr>Upcoming</gr> |
 | TBA | Stratos Storage Mainnet | <gr>Upcoming</gr> |
