@@ -3,6 +3,12 @@
 /*	Basic Style 
 /* =================================== */
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.opensans {
+  font-family: "Open Sans", sans-serif;
+}
+
 body {
     background-color: #071619;
     font-family: 'Open Sans', sans-serif;
