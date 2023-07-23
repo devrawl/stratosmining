@@ -70,7 +70,7 @@ markdown_extensions:
 
 plugins:
   - search
-  - social
+#  - social
 
 nav:
   - Welcome: index.md
@@ -87,7 +87,7 @@ nav:
     - Drive Pooling and Data Backup: drive-pooling-data-backup.md
   - Tips and Tricks:
     - Auto Upload Files to SDS: automatically-generate-and-upload-files-to-sds-network.md
-    - Auto Claim Faucet: automatically-claim-faucet-tropos-5.md
+    - Auto Claim Faucet: automatically-claim-faucet-testnet.md
     - Run a Node in Windows: howto-run-a-stratos-sds-node-in-windows-with-virtualbox.md
   - Possible Errors:
     - SDS Node is Suspended: sds-node-suspended-bad-performance.md

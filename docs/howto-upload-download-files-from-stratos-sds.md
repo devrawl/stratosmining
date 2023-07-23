@@ -6,6 +6,10 @@ description: This article explains how to use ppd executable to upload and downl
 
 <small> Last update: March 12, 2023</small>
 
+!!! danger "Warning"
+
+    At the moment, you can't setup a storage node on Mesos testnet. Will be soon updated.
+
 If you are running a SDS node, it's beneficial to the network to upload and download files, in order to generate traffic and network load, which helps testing the stability and limits of the storage network.
 
 This is not a mandatory step but as a testnet participant, it's kind of your duty to do so :)

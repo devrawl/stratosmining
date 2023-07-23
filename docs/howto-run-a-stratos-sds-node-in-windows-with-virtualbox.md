@@ -6,6 +6,10 @@ description: HowTo configure VirtualBox to run Ubuntu and a Stratos Decentralize
 
 <small> Last update: March 12, 2023</small>
 
+!!! danger "Warning"
+
+    At the moment, you can't setup a storage node on Mesos testnet. Will be soon updated.
+
 ## Introduction
 
 If you are curious about running a Stratos resource node (SDS) but aren't yet prepared to commit to purchasing or renting a dedicated server specifically for this task, here's how to test it first on windows, for free, using VirtualBox.

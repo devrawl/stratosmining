@@ -4,7 +4,7 @@ author: DevRawl
 description: HowTo pool multiple hard drives into one single large virtual drive and use it in a single folder. HowTo backup the data with SnapRAID.
 ---
 
-<small> Last update: March 12, 2023</small>
+<small> Last update: July 22, 2023</small>
 
 ## Use Case
 
@@ -73,16 +73,16 @@ First, go to MergerFS <a href="https://github.com/trapexit/mergerfs/releases" ta
 
 Go to `Assets` and click `Show all 55 assets`.
 
-If you're using Ubuntu 22.04 (Jammy Jellyfish), you will need to get the ` mergerfs_2.34.1.ubuntu-jammy_amd64.deb ` file. If you're using a SSH connection, just right click the deb file, select copy link and download it to your server with:
+If you're using Ubuntu 22.04 (Jammy Jellyfish), you will need to get the ` mergerfs_2.36.0.ubuntu-jammy_amd64.deb ` file. If you're using a SSH connection, just right click the deb file, select copy link and download it to your server with:
 
 ```
-wget https://github.com/trapexit/mergerfs/releases/download/2.34.1/mergerfs_2.34.1.ubuntu-jammy_amd64.deb
+wget https://github.com/trapexit/mergerfs/releases/download/2.36.0/mergerfs_2.36.0.ubuntu-jammy_amd64.deb
 ```
 
 To install the package, run:
 
 ```
-sudo dpkg -i mergerfs_2.34.1.ubuntu-jammy_amd64.deb
+sudo dpkg -i mergerfs_2.36.0.ubuntu-jammy_amd64.deb
 ```
 
 ### Identify drives

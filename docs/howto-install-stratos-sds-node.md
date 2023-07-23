@@ -1,19 +1,14 @@
 ---
 title: Setup a SDS Node
 author: DevRawl
-description: HowTo install and run a Stratos Decentralized Resource Node during the Tropos-5 Incentive Testnet.
+description: HowTo install and run a Stratos Decentralized Resource Node on Mesos Testnet and Mainnet.
 ---
 
 <small> Last update: March 12, 2023</small>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/d3SQmBMX2zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+!!! danger "Warning"
 
-!!! info
-    The newest Stratos chain version is Tropos-5 and after the upgrade, everything has been deleted except for the rewards you received if you ran a SDS node on Tropos-4.
-
-    SDS node had a lot of changes so if you were running a SDS node on Tropos-4, the best way to upgrade is to start a fresh install.
-
-    Old wallets can't be used due to compatibility changes so you will need to create a new wallet. You can still withdraw your rewards from Tropos-4.
+    At the moment, you can't setup a storage node on Mesos testnet. Will be soon updated.
 
 ## Rquirements
 

@@ -6,6 +6,11 @@ description: How to unsuspend a Stratos Resource Node if it got suspended for ba
 
 <small> Last update: March 12, 2023</small>
 
+!!! danger "Warning"
+
+    At the moment, you can't setup a storage node on Mesos testnet. Will be soon updated.
+
+
 ## Full error
 
 While running a SDS node, you might see this error sometimes about being suspended:

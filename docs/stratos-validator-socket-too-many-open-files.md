@@ -9,9 +9,9 @@ description: How to fix error Socket Too Many Open files while running a Stratos
 A lot of node operators, especially full-chain validator operators, that are running a node on a default Ubuntu installation, will come across this error sooner or later:
 
 !!! failure ""
-	    E[2022-02-23|20:28:56.724] dialing failed (attempts: 12): dial tcp xx.xx.xx.xx:26656: socket: too many open files module=pex addr=2edd3108c3b2ab34fd43ff7177fabde7db8942cd@xx.xx.xx.xx:26656
-	    E[2022-02-23|20:28:56.724] dialing failed (attempts: 13): dial tcp xx.xx.xx.xx:26656: socket: too many open files module=pex addr=9d1e802eff08308161c0e4d4e6dc8aad419a1705@xx.xx.xx.xx:26656
-	    E[2022-02-23|20:28:58.985] Accept on transport errored                  module=p2p err="accept tcp [::]:26656: accept4: too many open files" numPeers=54
+	    E[2023-02-23|20:28:56.724] dialing failed (attempts: 12): dial tcp xx.xx.xx.xx:26656: socket: too many open files module=pex addr=2edd3108c3b2ab34fd43ff7177fabde7db8942cd@xx.xx.xx.xx:26656
+	    E[2023-02-23|20:28:56.724] dialing failed (attempts: 13): dial tcp xx.xx.xx.xx:26656: socket: too many open files module=pex addr=9d1e802eff08308161c0e4d4e6dc8aad419a1705@xx.xx.xx.xx:26656
+	    E[2023-02-23|20:28:58.985] Accept on transport errored                  module=p2p err="accept tcp [::]:26656: accept4: too many open files" numPeers=54
 	    panic: open /home/user/.stchaind/data/blockstore.db/02472.ldb: too many open files
 	    panic: accept routine exited: accept tcp [::]:26656: accept4: too many open files
 

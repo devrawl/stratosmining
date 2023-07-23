@@ -6,7 +6,11 @@ description: This article explains how to setup a small script to automatically 
 
 <small> Last update: March 02, 2023</small>
 
-### Not a way to generate rewards!
+!!! danger "Warning"
+
+    At the moment, you can't setup a storage node on Mesos testnet. Will be soon updated.
+
+### Introduction
 
 During testnet, we are supposed to test the limits of the SDS network by uploading as many files as we can. 
 

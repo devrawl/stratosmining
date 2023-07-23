@@ -4,7 +4,7 @@ author: DevRawl
 description: Starting point for your journey as a Stratos Node Operator. What are the server requirements.
 ---
 
-<small> Last update: March 12, 2023</small>
+<small> Last update: July 22, 2023</small>
 
 ## Requirements
 
@@ -40,6 +40,8 @@ If you plan to run a node on the Stratos Network, here are some starting points:
         * Ubuntu 18.04+
         * Go 1.18+ linux/amd64 
 
+---
+
 ## HDD or SSD
 
 As a rule of thumb, it would only make sense to choose SSD if your connection bandwidth can reach transfer speeds similar to SSDs. 
@@ -49,6 +51,8 @@ For example, if you have a true 100Mbps connection, it means that you can transf
 A standard HDD will have a read/write speed of 80MB/s to 160MB/s. This means that regardless whether you have a HDD or a SSD, you will always write data at 12MB/s.
 
 On the other hand, if you have a true 2Gbps connection (250MB/s), you will never reach that maximum download speed because your HDD won't be able to write that fast so that's a situation when you'd want to have a SSD.
+
+---
 
 ## Self-managed server
 
@@ -64,15 +68,53 @@ Running your own server only requires two things:
     - Stable internet connection with 100Mbps bandwidth
     - Stable electricity connection
 
-### UPS
+---
 
-Having your computer connected to an UPS is always a good option, even if your electricity connection is stable and only cuts off a few times a year. But you never know when that brutal shutdown will have irreversible effects on your components, especially on your storage drives.
+### CPU
 
-Having an UPS is also good if your electricity cuts off frequently, this will allow you to keep your computer running until power comes back on (short cut-offs) but will also allow you to safely shut down your computer if a longer cut-off is expected.
+With the minimum hardware requirements in mind, here's a list of CPUs that meet each tier level:
 
-An average UPS will usually have two 7Ah batteries and an average computer will have a 500W power supply so that will probably last for around 25 minutes on a full load.
+| CPU Model | Segment | Cores | GHz (Idle/Turbo) |  Aprox. Cost (USD) |
+| --------- | ------- | ----- | ---------------- | ----------- |
+| <strong><g>Tier 1 or Validator</g></strong> |
+| Xeon E5-2650 v3 | Server | 10 | 2.3 / 3.0  | 118 |
+| Xeon E5-2680 v2 | Server | 10 | 2.8 / 3.6 | 135 |
+| Xeon E5-2680 v3 | Server | 12 | 2.5 / 3.3 | 150 |
+| Ryzen 7 1700 | Desktop | 8 | 3.0 / 3.7 | 149 |
+| Ryzen 7 5700G | Desktop | 8 | 3.8 / 4.6 | 150 |
+| Core i7-10700F | Desktop | 8 | 2.9 / 4.8 | 194 |
+| Core i5-13400 | Desktop | 10 | 2.5 / 4.6 | 219 |
+| Ryzen 7 3700X | Desktop | 8 | 3.6 / 4.4 | 222 |
+| Core i7-11700F | Desktop | 8 | 2.5 / 4.9 | 230 |
+| Core i5-12600K | Desktop | 10 | 3.7 / 4.9 | 249 |
+| Core i7-10700 | Desktop | 8 | 2.9 / 4.8 | 250 |
+| <strong><g>Tier 2</g></strong> |
+| Xeon E5-2650 v3[¹](#) | Server | 10 | 2.3 / 3.0  | 118 |
+| Xeon E5-2680 v2[¹](#) | Server | 10 | 2.8 / 3.6 | 135 |
+| Xeon E5-2680 v3[¹](#) | Server | 12 | 2.5 / 3.3 | 150 |
+| Core i7-13700KF | Desktop | 16 | 3.4 / 5.4 | 413 |
+| Core i9-12900KF | Desktop | 16 | 3.2 / 5.2 | 435 |
+| Core i9-12900K | Desktop | 16 | 3.2 / 5.2 | 442 |
+| Core i7-13700K | Desktop | 16 | 3.4 / 5.4 | 444 |
+| Ryzen 9 5950X | Desktop | 16 | 3.4 / 4.9 | 489 |
+| Ryzen 9 7950X | Desktop | 16 | 4.5 / 5.7 | 582 |
+| Ryzen 9 7950X3D | Desktop | 16 | 4.2 / 5.7 | 739 |
+| EPYC 7302 | Server | 16 | 3.0 / 3.3 | 955 |
+| <strong><g>Tier 3</g></strong> |
+| Ryzen Threadripper 2990WX | Server | 32 | 3.0 / 4.2 | 1452 |
+| Ryzen Threadripper 3970X | Server | 32 | 3.7 / 4.5 | 1909 |
 
-However, a Stratos resource node will mostly be idle, the power consumption will be very low, even when reading and writing data so most likely, you will get a few hours of backup time from that UPS.
+<small> ¹ &nbsp;&nbsp; In server configurations with 2 x CPU</small>
+
+!!! tip
+
+    CPUs and pre-built systems are generally much cheaper if purchased as refurbished / used. 
+
+    Generally, there's no issue in purchasing used hardware as CPUs and RAMs tend to have a very long life-span. 
+
+    However, avoid purchasing used HDDs / SSDs (or even refurbished if they're not from a reputable source).
+
+---
 
 ### Storage
 
@@ -82,13 +124,17 @@ Sure, hard drives are expensive, especially the high capacity ones, but that's a
 
 Stratos resource layer uses the Proof-of-Traffic algorithm consensus which means that you will get rewards each time traffic comes to/from your node. 
 
-Having a full disk won't bring any more traffic to your node and you won't get any more rewards but that can easily be fixed by adding a new storage drive to your computer.
+Having a disk filled at maximum capacity won't bring any more traffic to your node and you won't get any more rewards but that can easily be fixed by adding a new storage drive to your computer.
+
+---
 
 ### GPU
 
 Regardless if you run a Full-Chain node or a Storage Node, you won't be needing any powerful video card. Because Stratos uses a PoS and a PoT algorithm, your node will only use CPU, storage and bandwidth and even those in small amounts.
 
 An on-board graphic card will only come useful on first-time install of the Linux OS and initial setup. 
+
+---
 
 ### Peripherals
 
@@ -100,6 +146,35 @@ However, it is possible that it won't boot without a keyboard attached.
 
 A mouse will never be needed.
 
+---
+
+### Network
+
+Depending on the tier level you're going for, you will need to have a minimum connection bandwidth: 
+
+- Tier 1: 50 Mbps upload / 100 Mbps download
+- Tier 2: 100 Mbps upload / 100 Mbps download
+- Tier 3: 1 Gbps upload / 1 Gbps download
+
+The network speed checks won't be performed at maximum limit but rather close to the maximum limit. For example, if you activate a Tier 2 node and your network speed tests results in a 80-90 Mbps average speed, you will be fine.
+
+However, if your average speed will be, for example, 20-30 Mbps for a Tier 2 node, you will most likely get suspended.
+
+You will also need an external IP address (or access to network router so you can forward ports). Resource nodes use the TCP/IP model so your node port must be accessible from the Internet.
+
+---
+
+### UPS
+
+Having your computer connected to an UPS is always a good option, even if your electricity connection is stable and only cuts off a few times a year. But you never know when that brutal shutdown will have irreversible effects on your components, especially on your storage drives.
+
+Having an UPS is also good if your electricity cuts off frequently, this will allow you to keep your computer running until power comes back on (short cut-offs) but will also allow you to safely shut down your computer if a longer cut-off is expected.
+
+An average UPS will usually have two 7Ah batteries and an average computer will have a 500W power supply so that will probably last for around 25 minutes on a full load.
+
+However, a Stratos resource node will mostly be idle, the power consumption will be very low, even when reading and writing data so most likely, you will get a few hours of backup time from that UPS.
+
+---
 
 ## Cloud-hosted server
 
@@ -110,36 +185,24 @@ Cloud-hosted, rented servers, VPS and so on are not a good option if you plan to
     - Cheaper rental option will have a very low amount of available disk space.
     - Increasing available storage will increase the monthly cost. By a lot. And fast.
 
-### Temporary cloud solution
-
-!!! note ""
-    You can rent a Storage VPS with 3.2 TB of available disk space for around $35 a month.
-
-If you absolutely have no self-managed solution at the moment and you are looking to start running a Stratos Storage node for a limited period of time until a self-managed solution is available, you can rent a <a href="https://contabo.com/en/storage-vps/" target="_blank">storage VPS from Contabo</a>.  <br>(there is no ref code so you can just click the link :smile:)
-
-I found that it's the best option comparing price vs storage available.
-
-A couple of things to consider if choosing this option:
-
-- The 3.2TB space is non-extendable, meaning that when that drive gets filled, you won't be able to extend it and your node will stop receiving traffic.
-- The node setup (its files and folders) can always be moved to another server (just zip them up and move them).
-
-
+Basically, to meet the storage nodes hardware requirements, you will need to pay a lot for renting a server which will most likely result in a negative profit (server cost / mining rewards).
 
 !!! success ""
     However, you can still use a cloud-hosted server if you only plan to run a Full-Chain (Validator) node.
 
 The hardware resources for running a Full-Chain node are not as high as for running a SDS storage node and most likely, any entry level to mid level type of rented server will be enough for a Full-Chain node.
 
-As for storage needed for a Full-Chain node, a 500GB - 1TB drive should be enough.
+As for the storage needed for a Full-Chain node, a 2TB drive should be enough.
+
+---
 
 ## IMPORTANT INFO
 
-Whatever hosting solution you chose, please remember:
+Whichever hosting solution will you choose, please remember:
 
 !!! failure ""
 
-    A SDS Resource Node will need to be activated by pleging an activation fee, as follows:
+    A SDS Resource Node will need to be activated by pledging an activation fee, as follows:
     
     - Tier 1 SDS Node: 800 STOS
     - Tier 2 SDS Node: 1600 STOS

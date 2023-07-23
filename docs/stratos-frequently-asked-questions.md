@@ -4,15 +4,21 @@ author: DevRawl
 description: Stratos Decentralized Network Frequently Asked Questions. Is there an airdrop? Find out here.
 ---
 
-<small> Last update: June 18, 2023</small>
+<small> Last update: July 22, 2023</small>
 
 ??? info "When Mainnet?"
 
-    As of 1st of March 2023, the last step before mainnet can be launched is to have the project audited. The audit agreement has been signed with BlockSec and the whole process will start this week. 
-    
-    Due to the complexity of the project, nobody can say exactly how long it's going to take but we're expecting it to last at least a month or two. The entire code has to be audited, then each issue found has to be addressed by the Stratos team and at the end, a final audit will be performed. 
-    
-    This is an important step to ensure there are no security or functionality issues that can be exploited later on. BlockSec has performed audits on PancakeSwap, Alpaca Finance and Crypto com so we are confident that Stratos will grow to be very secure.
+    As of 22nd of July 2023, the project is in the final testing phase. Mesos Testnet will be running the same software version of the Mainnet and final test are being conducted to make sure the storage module is working properly alongside the blockchain module.
+
+    Once every scenario is tested with no functionality issues arising, team will decide a Mainnet date.
+
+ 
+
+??? info "What is Mesos?"
+
+    Mesos is the name of the Stratos Permanent Testnet, just like Ethereum has its "Goerli" testnet. It will run the same software version as the Mainnet, but with test tokens that have no value (there will be a faucet that disperses test tokens on request).
+
+    Its purpose is to allow users, developers and node operators to test every aspect of Stratos Network without spending actual tokens with value and potentially lose them if errors are made.
 
  
 

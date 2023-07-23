@@ -4,7 +4,7 @@ author: DevRawl
 description: Stratos Decentralized Network current status and roadmap. List of completed and upcoming tasks.
 ---
 
-<small> Last update: June 19, 2023</small>
+<small> Last update: July 22, 2023</small>
 
 ### Roadmap
 
@@ -17,7 +17,9 @@ description: Stratos Decentralized Network current status and roadmap. List of c
 | Apr 2022 | Stratos Incentive Testnet Tropos-3 | <g>Completed</g> |
 | Jul 2022 | Stratos Incentive Testnet Tropos-4 | <g>Completed</g> |
 | Jan 2023 | Stratos Incentive Testnet Tropos-5 | <g>Completed</g> |
-| Mar 2023 | Security audit with BlockSec | <o>In Progress</o> |
+| Mar 2023 | Security audit with BlockSec [<a href="https://github.com/stratosnet/security-audits/blob/main/stratos-chain/Stratos_Chain_and_SDS_v0.10.0_BlockSec_signed_v1.0.pdf" target="_blank">Link</a>] | <g>Completed</g> |
+| Jul 2023 | Mesos Permanent Blockchain Testnet | <g>Completed</g> |
+| Jul 2023 | Mesos Permanent Storage Testnet | <o>In Progress</o> |
 | TBA | Stratos Blockchain Mainnet | <gr>Upcoming</gr> |
 | TBA | Stratos Storage Mainnet | <gr>Upcoming</gr> |
 | TBA | Stratos Computation Testnet | <gr>Upcoming</gr> |
@@ -29,11 +31,13 @@ description: Stratos Decentralized Network current status and roadmap. List of c
 ### Current status
 
 !!! tip ""
-    Stratos Incentive Testnet Tropos-5
+    Stratos Permanent Testnet (Mesos)
 
-The purpose of the testnet is to validate all the technical design and network topology that can achieve the goal of the project — to provide a fully decentralized high-efficiency storage. At this stage, everyone is welcome to participate in the tesnet by setting up and running a node.
+The Mesos Testnet is running the same software as the Mainnet and its purpose is to provide a testing environment for users, developers and node operators to test functionality before deploying on Mainnet.
 
-This testnet phrase will be ongoing until MainNet is released, sometime in the first half of 2023 and until then, an incentive is being awarded for running a node.
+At this stage, everyone is welcome to participate in the testnet by setting up and running a node.
+
+This testnet phrase will be ongoing indefinitely alongside the MainNet.
 
 
 

@@ -8,7 +8,7 @@ description: What is the handshake error on replay wrong Block.Header.AppHash wh
 
 Full error output:
 !!! failure ""
-	    I[2022-03-31|13:31:46.055] starting ABCI with Tendermint                module=main
+	    I[2023-03-31|13:31:46.055] starting ABCI with Tendermint                module=main
 	    ERROR: error during handshake: error on replay: wrong Block.Header.AppHash.  Expected 3488F66A1C1F432B151FEE77E9EA59AF8D2594D5A611161F25A9249727D6BD6E, got 46ABEA3F008170EF6594D4B689F41023A0746588271970B5E2BB0CF4034F8FF0
 
 A similar error is
@@ -23,11 +23,6 @@ Also, make sure you have <a href="https://stratosmining.info/stratos-validator-s
 This command will delete the addressbook, remove all blockchain history and reset the private validator file to genesis state:
 ```
 stchaind unsafe-reset-all
-```
-
-To get your node to start the sync process faster, you can try using my addressbook:
-```
-wget https://stratosmining.info/addrbook.json -O $HOME/.stchaind/config/addrbook.json
 ```
 
 Start the node again in a screen or a tmux and leave it to reach the latest block height.

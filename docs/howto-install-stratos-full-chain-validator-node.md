@@ -4,13 +4,13 @@ author: DevRawl
 description: HowTo install a Full-Chain node on Stratos Network and configure it as a Blockchain Validator.
 ---
 
-<small> Last update: June 18, 2023</small>
+<small> Last update: July 22, 2023</small>
 
 ### Introduction
 
-- There are NO REWARDS for running a validator in testnet. You should only run a validator if you want to help test the network, learn about running a node, etc.
-- There are only 100 validator spots available.
-- Activating and becoming a validator requires test tokens. You can only acquire test tokens from the faucet or you can request them on Telegram / Discord.
+- There are NO REWARDS for running a validator in testnet. You should only run a validator if you want to learn about running a node, test your hardware, etc.
+- Activating and becoming a validator on TestNet requires test tokens that have no real value. You can only acquire test tokens from the faucet or you can request them on Telegram / Discord.
+- Activating and becoming a validator on MainNet requires real value tokens. <small><o>MainNet is not live at the moment.</o></small>
 
 ### Requirements
 
@@ -32,7 +32,17 @@ set the password and press Enter for every question. Now open a SSH and login as
     Copy each command one by one and wait for the first one to finish before running the next one. I haven’t grouped every command in one line so you understand better what’s going on.
 
 ```sh
-sudo apt install tmux
+sudo apt update
+sudo apt upgrade
+sudo apt install build-essential curl tmux snapd libgmp3-dev flex bison --yes
+
+wget https://crypto.stanford.edu/pbc/files/pbc-0.5.14.tar.gz
+tar xfz pbc-0.5.14.tar.gz && cd pbc-0.5.14
+./configure
+make
+sudo make install
+sudo ldconfig
+
 mkdir $HOME/bin 
 echo 'export PATH="$HOME/bin:$PATH"' >> ~/.profile 
 source ~/.profile
@@ -75,29 +85,43 @@ Run these commands, one by one, from a terminal, logged in as a regular user:
 
 
 ```
-wget https://github.com/stratosnet/stratos-chain/releases/download/v0.9.0/stchaind -P $HOME/bin
+wget https://github.com/stratosnet/stratos-chain/releases/download/v0.10.0/stchaind -P $HOME/bin
 chmod +x $HOME/bin/stchaind
 ```
 
 Check files for integrity:
 
 ```
-md5sum $HOME/bin/stchain*
+md5sum $HOME/bin/stchaind
+
+# Expected response:
+# e7e52a3831f8c22864badbf4c268adb5  /home/your-username/bin/stchaind
 ```
 
-Expected result:
+Verify installation:
 
 ```
-1843b162a7d2b1f4363938fc73d421e8  /home/your-username/bin/stchaind
+stchaind version
+
+# Expected response:
+# v0.10.0
 ```
 
 
 ### Initialize the node
 
-```sh
-cd $HOME
-stchaind init MyNodeName --chain-id tropos-5
-```
+=== "TestNet"
+
+    ```sh
+    cd $HOME
+    stchaind init MyNodeName --chain-id mesos-1
+    ```
+
+=== "MainNet"
+
+    ```sh
+    Unavailable at the moment.
+    ```
 
 Replace MyNodeName with the name you want to give your node. 
 
@@ -105,10 +129,18 @@ This step will create .stchaind folder and config files.
 
 ### Download config & genesis files
 
-```sh
-wget https://raw.githubusercontent.com/stratosnet/stratos-chain-testnet/main/config.toml -O $HOME/.stchaind/config/config.toml
-wget https://raw.githubusercontent.com/stratosnet/stratos-chain-testnet/main/genesis.json -O $HOME/.stchaind/config/genesis.json
-```
+=== "TestNet"
+
+    ```sh
+    wget https://raw.githubusercontent.com/stratosnet/stratos-chain-testnet/main/config.toml -O $HOME/.stchaind/config/config.toml
+    wget https://raw.githubusercontent.com/stratosnet/stratos-chain-testnet/main/genesis.json -O $HOME/.stchaind/config/genesis.json
+    ```
+
+=== "MainNet"
+
+    ```sh
+    Unavailable at the moment.
+    ```
 
 Get your external ip by running this command. Save the ip address for next step:
 
@@ -145,20 +177,20 @@ stchaind start
 Wait a few minutes, your node will probably get a list of errors such as these. It's normal, just wait somewhere between a few minutes to half an hour.
 
 !!! info
-			E[2022-04-05|15:01:34.535] Stopping peer for error                      module=p2p peer="Peer{MConn{3.114.5.73:26656} e3818948f8fff908c2db2e3cf73902e516998734 out}" err=EOF
-			E[2022-04-05|15:02:05.356] Stopping peer for error                      module=p2p peer="Peer{MConn{3.114.5.73:26656} e3818948f8fff908c2db2e3cf73902e516998734 out}" err=EOF
-			E[2022-04-05|15:02:35.337] Stopping peer for error                      module=p2p peer="Peer{MConn{3.114.5.73:26656} e3818948f8fff908c2db2e3cf73902e516998734 out}" err=EOF
+			E[2023-04-05|15:01:34.535] Stopping peer for error                      module=p2p peer="Peer{MConn{3.114.5.73:26656} e3818948f8fff908c2db2e3cf73902e516998734 out}" err=EOF
+			E[2023-04-05|15:02:05.356] Stopping peer for error                      module=p2p peer="Peer{MConn{3.114.5.73:26656} e3818948f8fff908c2db2e3cf73902e516998734 out}" err=EOF
+			E[2023-04-05|15:02:35.337] Stopping peer for error                      module=p2p peer="Peer{MConn{3.114.5.73:26656} e3818948f8fff908c2db2e3cf73902e516998734 out}" err=EOF
 
 After a while, you should start to see these messages:
 
 !!! info
 
-			I[2022-04-05|15:10:08.770] Executed block                               module=state height=462 validTxs=0 invalidTxs=0
-			I[2022-04-05|15:10:08.773] Committed state                              module=state height=462 txs=0 appHash=0F1991858B4357756F969CFD3D3580649C2FAB70FC140BC27442E9A1E4815653
-			I[2022-04-05|15:10:08.779] Executed block                               module=state height=463 validTxs=0 invalidTxs=0
-			I[2022-04-05|15:10:08.782] Committed state                              module=state height=463 txs=0 appHash=6DF50E9BCAE47B59E4ED26FF3A7365A97BFC678EA09A68B16CDBD83AB59491E6
+			I[2023-04-05|15:10:08.770] Executed block                               module=state height=462 validTxs=0 invalidTxs=0
+			I[2023-04-05|15:10:08.773] Committed state                              module=state height=462 txs=0 appHash=0F1991858B4357756F969CFD3D3580649C2FAB70FC140BC27442E9A1E4815653
+			I[2023-04-05|15:10:08.779] Executed block                               module=state height=463 validTxs=0 invalidTxs=0
+			I[2023-04-05|15:10:08.782] Committed state                              module=state height=463 txs=0 appHash=6DF50E9BCAE47B59E4ED26FF3A7365A97BFC678EA09A68B16CDBD83AB59491E6
 
-This means that the node has started to sync but it's going to take a while to reach the latest block height. As you can see in the example above, node has sync to height 463, you can check the latest height on <a href="https://explorer-tropos.thestratos.org/" target="_blank">Stratos Explorer</a>.
+This means that the node has started to sync but it's going to take a while to reach the latest block height. As you can see in the example above, node has sync to height 463, you can check the latest height on <a href="https://explorer-mesos.thestratos.org/" target="_blank">Stratos Explorer</a>.
 
 Leave the node running in background by detaching from tmux: 
 
@@ -179,9 +211,17 @@ When _catching_up_ shows false and _latest_block_height_ matches the one on Expl
 
 Once your node reaches the latest block height, run this command to generate a wallet address:
 
-```sh
-./stchaind keys add WalletName --hd-path="m/44'/606'/0'/0/0" --keyring-backend=test
-```
+=== "TestNet"
+
+    ```sh
+    stchaind keys add WalletName --hd-path="m/44'/606'/0'/0/0" --keyring-backend=test
+    ```
+
+=== "MainNet"
+
+    ```sh
+    Unavailable at the moment.
+    ```
 
 You can enter anything you want for _WalletName_
 
@@ -189,10 +229,12 @@ Save the address , pubkey and mnemonic phrase for later use.
 
 ### Get some tokens from faucet
 
+<small><o>Only available for TestNet</o></small>
+
 Open a terminal and run:
 
 ```sh
-curl --header "Content-Type: application/json" --request POST --data '{"denom":"stos","address":"st1xxx"} ' https://faucet-tropos.thestratos.org/credit
+curl --header "Content-Type: application/json" --request POST --data '{"denom":"stos","address":"st1xxx"} ' https://faucet-mesos.thestratos.org/credit
 ```
 
 Replace st1xxx with the address you generated earlier.
@@ -200,7 +242,7 @@ Replace st1xxx with the address you generated earlier.
 !!! info
     Remember that faucet is limited to only a few requests per day.
 
-You can check your wallet balance directly on the <a href="https://explorer-tropos.thestratos.org/" target="_blank">Stratos Explorer</a>  (just search for your st1xxx wallet address) or directly from terminal:
+You can check your wallet balance directly on the <a href="https://explorer-mesos.thestratos.org/" target="_blank">Stratos Explorer</a>  (just search for your st1xxx wallet address) or directly from terminal:
 
 ```
 stchaind query bank balances st1xxx
@@ -227,27 +269,36 @@ You should get reply like:
 
 Use the following command:
 
-```sh
-stchaind tx staking create-validator \
---amount=10stos \
---pubkey='{"@type":"/cosmos.crypto.ed25519.PubKey","key":"ZZZZZZZZZZZZZZZZZZ"}' \
---moniker="MyNodeName" \
---commission-rate=0.10 \
---commission-max-rate=0.20 \
---commission-max-change-rate=0.01 \
---min-self-delegation=1 \
---from=st1xxxxxxxxxxxxxxxxxxx \
---chain-id=tropos-5  
---keyring-backend=test 
---gas=123123123123
---gas-prices=1000000000wei -y
-```
+=== "TestNet"
 
-In the above command, you can edit the following:
+    ```sh
+    stchaind tx staking create-validator \
+    --amount=10stos \
+    --pubkey='{"@type":"/cosmos.crypto.ed25519.PubKey","key":"ZZZZZZZZZZZZZZZZZZ"}' \
+    --moniker="MyNodeName" \
+    --commission-rate=0.10 \
+    --commission-max-rate=0.20 \
+    --commission-max-change-rate=0.01 \
+    --min-self-delegation=1 \
+    --from=st1xxxxxxxxxxxxxxxxxxx \
+    --chain-id=mesos-1  
+    --keyring-backend=test 
+    --gas=auto
+    --gas-adjustment=1.5
+    --gas-prices=1000000000wei -y
+    ```
+
+=== "MainNet"
+
+    ```sh
+    Unavailable at the moment.
+    ```
+
+In the above command, edit the following:
 
 !!! info
 
-    **amount**: enter the amount of stos you have available in your wallet
+    **amount**: enter the amount of stos you want to self-delegate
 
     **pubkey**: use the pubkey you got earlier
 
@@ -255,18 +306,26 @@ In the above command, you can edit the following:
 
     **from**: replace st1xxxxx with your wallet address
 
-    **gas**: if you get an error, try to increase the value
 
+You can delegate more tokens with this command (example for 10 tokens):
 
-You should continue to claim the faucet as often as you can and once you gather more tokens, you can delegate them with this command (example for 10 tokens):
+=== "TestNet"
 
-```sh
-stchaind tx staking delegate stvaloper1zzzz 10stos \
---from=st1xxxx \
---chain-id=tropos-5 \
---keyring-backend=test \
---gas-prices=1000000000wei
-```
+    ```sh
+    stchaind tx staking delegate stvaloper1zzzz 10stos \
+    --from=st1xxxx \
+    --chain-id=mesos-1 \
+    --keyring-backend=test \
+    --gas=auto
+    --gas-adjustment=1.5    
+    --gas-prices=1000000000wei
+    ```
+
+=== "MainNet"
+
+    ```sh
+    Unavailable at the moment.
+    ```
 
 Replace:
 
