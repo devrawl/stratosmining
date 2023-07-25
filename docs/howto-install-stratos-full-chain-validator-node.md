@@ -281,10 +281,10 @@ Use the following command:
     --commission-max-change-rate=0.01 \
     --min-self-delegation=1 \
     --from=st1xxxxxxxxxxxxxxxxxxx \
-    --chain-id=mesos-1  
-    --keyring-backend=test 
-    --gas=auto
-    --gas-adjustment=1.5
+    --chain-id=mesos-1 \
+    --keyring-backend=test \
+    --gas=auto \
+    --gas-adjustment=1.5 \
     --gas-prices=1000000000wei -y
     ```
 
