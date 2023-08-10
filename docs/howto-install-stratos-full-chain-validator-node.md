@@ -6,6 +6,10 @@ description: HowTo install a Full-Chain node on Stratos Network and configure it
 
 <small> Last update: July 22, 2023</small>
 
+
+<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/fHirnLca1Do" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+
 ### Introduction
 
 - There are NO REWARDS for running a validator in testnet. You should only run a validator if you want to learn about running a node, test your hardware, etc.
@@ -34,7 +38,7 @@ set the password and press Enter for every question. Now open a SSH and login as
 ```sh
 sudo apt update
 sudo apt upgrade
-sudo apt install build-essential curl tmux snapd libgmp3-dev flex bison --yes
+sudo apt install build-essential curl tmux libgmp3-dev flex bison --yes
 
 wget https://crypto.stanford.edu/pbc/files/pbc-0.5.14.tar.gz
 tar xfz pbc-0.5.14.tar.gz && cd pbc-0.5.14
@@ -142,17 +146,83 @@ This step will create .stchaind folder and config files.
     Unavailable at the moment.
     ```
 
-Get your external ip by running this command. Save the ip address for next step:
+### Enable State Sync
 
-```sh
-curl ifconfig.co
+- Get the last block height
+
+```shell
+curl -s http://rpc-mesos.thestratos.org/block | jq -r '.result.block.header.height'
 ```
 
-Open the config file
-
-```sh
-nano $HOME/.stchaind/config/config.toml
 ```
+Example response:
+326121
+```
+
+- Get the hash for the block
+
+Since snapshots are generated every 1,000 blocks, you'll need to obtain the hash for the block number at 1,000-interval heights. 
+
+For example, in the above response we got `326121` so we will need to request the hash for height `326000`.
+
+If latest block would have been `374521`, we will request the hash for `374000` and so on.
+
+Always use the most recent block height, rounded down to the nearest lower multiple of 1,000.
+
+```shell
+curl -s http://rpc-mesos.thestratos.org/block?height=326000 | jq -r '.result.block_id.hash'
+```
+
+```
+Example response:
+C524665A353CB6C5E03D4B73B3151FA00862704A0966E01C5E97F1DE1B08B1B4
+```
+
+- Setup config.toml
+
+Edit the state sync section of `.stchaind/config/config.toml` as follows:
+
+Remember to use the latest height rounded down to last 1,000 round number and its hash.
+
+```toml
+#######################################################
+###         State Sync Configuration Options        ###
+#######################################################
+[statesync]
+# State sync rapidly bootstraps a new node by discovering, fetching, and restoring a state machine
+# snapshot from peers instead of fetching and replaying historical blocks. Requires some peers in
+# the network to take and serve state machine snapshots. State sync is not attempted if the node
+# has any local state (LastBlockHeight > 0). The node will have a truncated block history,
+# starting from the height of the snapshot.
+enable = true
+
+# RPC servers (comma-separated) for light client verification of the synced state machine and
+# retrieval of state data for node bootstrapping. Also needs a trusted height and corresponding
+# header hash obtained from a trusted source, and a period during which validators can be trusted.
+#
+# For Cosmos SDK-based chains, trust_period should usually be about 2/3 of the unbonding time (~2
+# weeks) during which they can be financially punished (slashed) for misbehavior.
+rpc_servers = "35.160.97.156:26657,rpc-mesos.thestratos.org:80"
+trust_height = 326000
+trust_hash = "C524665A353CB6C5E03D4B73B3151FA00862704A0966E01C5E97F1DE1B08B1B4"
+trust_period = "168h0m0s"
+
+# Time to spend discovering snapshots before initiating a restore.
+discovery_time = "15s"
+
+# Temporary directory for state sync snapshot chunks, defaults to the OS tempdir (typically /tmp).
+# Will create a new, randomly named directory within, and remove it when done.
+temp_dir = "./tmp"
+
+# The timeout duration before re-requesting a chunk, possibly from a different
+# peer (default: 1 minute).
+chunk_request_timeout = "10s"
+
+# The number of concurrent chunk fetchers to run (default: 1).
+chunk_fetchers = "4"
+```
+
+- Edit your node name
 
 Find the following values and edit them accordingly:
 
@@ -160,6 +230,22 @@ Find the following values and edit them accordingly:
 # A custom human readable name for this node
 moniker = "node"
 ```
+
+You can save and close the `config.toml` file.
+
+- Disable JSON-RPC
+
+The EVM RPC will prevent your node from starting using state sync, so you can temporarily disable it by editing `.stchaind/config/app.toml`:
+
+You can re-enable it once node's sync is up to date (node restart required).
+
+```
+[json-rpc]
+# Enable defines if the gRPC server should be enabled.
+enable = false
+```
+
+
 
 Replace node with MyNodeName you used while initializing the node.
 
@@ -176,21 +262,26 @@ stchaind start
 
 Wait a few minutes, your node will probably get a list of errors such as these. It's normal, just wait somewhere between a few minutes to half an hour.
 
-!!! info
-			E[2023-04-05|15:01:34.535] Stopping peer for error                      module=p2p peer="Peer{MConn{3.114.5.73:26656} e3818948f8fff908c2db2e3cf73902e516998734 out}" err=EOF
-			E[2023-04-05|15:02:05.356] Stopping peer for error                      module=p2p peer="Peer{MConn{3.114.5.73:26656} e3818948f8fff908c2db2e3cf73902e516998734 out}" err=EOF
-			E[2023-04-05|15:02:35.337] Stopping peer for error                      module=p2p peer="Peer{MConn{3.114.5.73:26656} e3818948f8fff908c2db2e3cf73902e516998734 out}" err=EOF
+```
+{"level":"info","server":"node","module":"statesync","format":1,"height":326000,"time":"2023-08-10T21:35:36Z","message":"Discovered new snapshot"}
+{"level":"info","server":"node","module":"statesync","format":1,"height":325000,"time":"2023-08-10T21:35:36Z","message":"Discovered new snapshot"}
+{"level":"info","server":"node","module":"statesync","format":1,"height":326000,"time":"2023-08-10T21:35:53Z","message":"Snapshot accepted, restoring"}
+```
 
 After a while, you should start to see these messages:
 
-!!! info
+```
+{"level":"info","server":"node","module":"state","app_hash":"3F44580F60F95CADA57D2532B77894D101A30C841D197A8F972D0CEB6DBC4F2A","height":329687,"num_txs":0,"time":"2023-08-10T21:36:15Z","message":"committed state"}
+{"level":"info","server":"node","module":"txindex","height":329687,"time":"2023-08-10T21:36:15Z","message":"indexed block exents"}
+{"level":"info","server":"node","module":"state","height":329688,"num_invalid_txs":0,"num_valid_txs":0,"time":"2023-08-10T21:36:15Z","message":"executed block"}
+{"level":"info","commit":"","time":"2023-08-10T21:36:15Z","message":"commit synced"}
+{"level":"info","server":"node","module":"state","app_hash":"3EEAF7EA60E7E83CDE5DAB49E9E65C2D34D2B7DE24127C0792F2036410CAE690","height":329688,"num_txs":0,"time":"2023-08-10T21:36:15Z","message":"committed state"}
+{"level":"info","server":"node","module":"txindex","height":329688,"time":"2023-08-10T21:36:15Z","message":"indexed block exents"}
+{"level":"info","server":"node","module":"state","height":329689,"num_invalid_txs":0,"num_valid_txs":0,"time":"2023-08-10T21:36:15Z","message":"executed block"}
+{"level":"info","commit":"","time":"2023-08-10T21:36:15Z","message":"commit synced"}
+```
 
-			I[2023-04-05|15:10:08.770] Executed block                               module=state height=462 validTxs=0 invalidTxs=0
-			I[2023-04-05|15:10:08.773] Committed state                              module=state height=462 txs=0 appHash=0F1991858B4357756F969CFD3D3580649C2FAB70FC140BC27442E9A1E4815653
-			I[2023-04-05|15:10:08.779] Executed block                               module=state height=463 validTxs=0 invalidTxs=0
-			I[2023-04-05|15:10:08.782] Committed state                              module=state height=463 txs=0 appHash=6DF50E9BCAE47B59E4ED26FF3A7365A97BFC678EA09A68B16CDBD83AB59491E6
-
-This means that the node has started to sync but it's going to take a while to reach the latest block height. As you can see in the example above, node has sync to height 463, you can check the latest height on <a href="https://explorer-mesos.thestratos.org/" target="_blank">Stratos Explorer</a>.
+This means that the node has started to sync but it's going to take a bit to reach the latest block height. You can check the latest height on <a href="https://explorer-mesos.thestratos.org/" target="_blank">Stratos Explorer</a>.
 
 Leave the node running in background by detaching from tmux: 
 
@@ -341,7 +432,7 @@ Have fun!
 
 ### Resources
 
-<a href="https://github.com/stratosnet/sds/wiki/Tropos-Incentive-Testnet" target="_blank">Official Guide - Full Version</a>
+<a href="https://docs.thestratos.org/docs-stratos-chain/setup-and-run-a-stratos-chain-full-node/" target="_blank">Official Guide - Full Chain Node</a>
 
-<a href="https://github.com/stratosnet/stratos-chain/wiki/How-to-Become-a-Validator" target="_blank">Official Guide - How to become a validator</a>
+<a href="https://docs.thestratos.org/docs-stratos-chain/how-to-become-a-validator/" target="_blank">Official Guide - How to become a validator</a>
 
