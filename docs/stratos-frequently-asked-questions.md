@@ -4,15 +4,7 @@ author: DevRawl
 description: Stratos Decentralized Network Frequently Asked Questions. Is there an airdrop? Find out here.
 ---
 
-<small> Last update: July 22, 2023</small>
-
-??? info "When Mainnet?"
-
-    As of 22nd of July 2023, the project is in the final testing phase. Mesos Testnet will be running the same software version of the Mainnet and final test are being conducted to make sure the storage module is working properly alongside the blockchain module.
-
-    Once every scenario is tested with no functionality issues arising, team will decide a Mainnet date.
-
- 
+<small> Last update: September 21, 2023</small>
 
 ??? info "What is Mesos?"
 
@@ -22,13 +14,13 @@ description: Stratos Decentralized Network Frequently Asked Questions. Is there 
 
  
 
-??? info "When staking?"
+??? info "Can i stake STOS?"
 
-    Once mainnet is live, we will be able to delegate our tokens to a validator from the Stratos Wallet. 
+    Yes, you can delegate our stos coins to a validator from the Stratos Wallet. See [Staking](../staking).
     
     Anyone with access to a server can setup a validator or a resource node to generate some extra rewards. 
     
-    Until mainnet is live, you cannot use your ERC20 stos tokens for staking.
+    However, you will need to bridge the ERC-20 tokens to Stratos native coins for staking.
 
  
 
@@ -80,41 +72,6 @@ description: Stratos Decentralized Network Frequently Asked Questions. Is there 
 	 Vesting period was TGE date + quarterly over 9 months which means that all pre-sale tokens have been released by **9th of March 2022**. 
 	 
 	 Total raised was $2,130,000
-
- 
-
-??? info "How to send my stos tokens to Stratos wallet?"
-
-    At the moment, stos is an ERC20 token that uses the Ethereum blockchain and cannot be directly transferred to the Stratos wallet. 
-    
-    Also, you shouldn't attempt to send erc20 tokens to the Stratos wallet, those are running on different networks and your coins will be lost. 
-    
-    Once mainnet is launched, we will provide documentation on how you will be able to convert the stos erc20 token to the stos native coin that will use the Stratos blockchain.
-
- 
-
-??? info "How much will it cost to activate a validator on Stratos blockchain?"
-
-    There will be a fixed number of available validator spots (probably 75 or 100), this means that the cost will be variable based on demand. For example, if all 100 spots have been filled but you want to run a validator yourself, you will need to delegate more coins than the lowest active validator has in his name. Let's say you look at the validators list, you sort it by the amount of tokens delegated to their name and you see that the one on place 100 has the lowest amount of tokens delegated, let's say 50. So, you will need to delegate 51 tokens to your own validator, this way, you will take place 100 and he will become inactive. Needless to say that if demand for a validator spot is high, the minimum amount of tokens needed to become an active validator will increase also.
-
- 
-
-??? info "How much will it cost to activate a resource node on Stratos Storage Network?"
-
-    The activation cost for a SDS node will be fixed, divided by tree tiers: 
-    
-	- tier 1: 800 stos 
-	- tier 2: 1600 stos 
-	- tier 3: 3600 stos
-
-
-    Each tier will have different hardware requirements and the higher the tier, the higher the rewards it will get.
-
-    A fact worth mentioning: the activation fee is not something you 'pay'. It will be kept in a type of escrow to ensure you will keep your node in optimal condition. This means that if you run a node for a few months without any incidents and decide to stop, you will get your activation fee back (after a period of time). 
-    
-    However, if during the mining period, your node doesn't successfully complete required tasks (fails to transfer or store a file), it goes offline without setting maintenance mode first and so on, there will be penalties subtracted from the amount of rewards you generated and, if those aren't sufficient, from the activation fee. 
-    
-    Also, the activation amount generates staking rewards just like they would if they were delegated to a validator.
 
  
 

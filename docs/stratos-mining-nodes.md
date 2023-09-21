@@ -4,21 +4,23 @@ author: DevRawl
 description: What type of nodes are available on Stratos Decentralized Network. What are the requirements and what are the expected rewards.
 ---
 
-<small> Last update: July 22, 2023</small>
+<small> Last update: September 21, 2023</small>
 
 Currently, there are two types of nodes you can setup and run:
 
 ## Full-chain node (validator)
 
-<small>(Available to be operated in <g>TestNet</g> / <o><del>MainNet</del></o>)</small>
+<small>(Available to be operated in <g>TestNet</g> / <g>MainNet</g>)</small>
 
 This type of node will be processing transactions using the Proof of Stake mechanism. In practice, running a full-node only implies running a non-compromised and up-to-date version of the software with low network latency and without downtime. It is encouraged to run a full-node even if you do not plan to be a validator.
 
 The full-chain validator is a full-node that participates in the Stratos Chain block generation cycle and also voting for the validity of a block proposed. There are currently 100 Validator spots available.
 
+---
+
 ## SDS resource node
 
-<small>(Available to be operated in <o><del>TestNet</del></o> / <o><del>MainNet</del></o>)</small>
+<small>(Available to be operated in <g>TestNet</g> / <o><del>MainNet</del></o>)</small>
 
 The Stratos Decentralized Storage (SDS) network is a scalable, reliable, self-balancing elastic acceleration network. We can simply take it as a decentralized file system suitable for running on general-purpose hardware.
 
@@ -27,6 +29,8 @@ SDS is composed of many Resource Nodes that store data, and a few Meta Nodes tha
 A Node that provides their resource (disk/bandwidth/computation power) for SDS is called a Resource Node.
 
 Resource Nodes will earn rewards during MainNet based on the amount of incoming traffic to the node.
+
+---
 
 ## Minimum requirements
 
@@ -58,6 +62,8 @@ Resource Nodes will earn rewards during MainNet based on the amount of incoming 
     * Ubuntu 18.04+
     * Go 1.18+ linux/amd64 
 
+---
+
 ## Incentive reward plan for nodes
 
 Nodes will earn rewards in the form of STOS, which is the native coin for Stratos.
@@ -67,6 +73,8 @@ Each epoch (which is about 10 minutes) will distribute 80 TROS which are divided
 - 60% (48 STOS) goes to resource layer (storage nodes).
 - 20% (16 STOS) goes to value layer (blockchain nodes).
 - 20% (16 STOS) goes to meta layer (meta nodes).
+
+---
 
 ### Resource nodes
 
@@ -92,6 +100,8 @@ This is an over-simplified example as there will be a lot more nodes running in 
 
 **In practice**, we cannot estimate how much a node will be generating in rewards over a one month period. It's possible that the node will be part of the 80% each epoch but it's also possible it will never be part of the 80% so its monthly rewards will be zero.
 
+---
+
 ### Blockchain nodes
 
 The 16 STOS will be divided among the wallets that delegated (staked) their tokens to a validator. They will be distributed percentually, based on the amount of tokens staked. 
@@ -100,19 +110,25 @@ To the base reward, there will be added the chain transaction fee which will be 
 
 Validators can also set a individual commission rate which will be applied to the revenue received by the delegators in its pool.
 
+---
+
 ### Meta nodes
 
 Meta nodes are responsible for indexing, auditing and routing services between clients and resource nodes. They are also responsible for generating tasks (upload/download) and selecting the most appropriate node for a specific task. It's also in charge of performing network health checking which ensures that all nodes and data are in good condition.
 
 For the moment, meta nodes are ran by the team in a closed source environment (for project code privacy) and are not available to be setup and run publicly. 
 
+---
+
 ## Penalties
 
 Both resource and blockchain nodes are subject to penalties if certain conditions are not met.
 
-- Blockchain nodes will be slashed for 0.05% of their total delegation pool if they miss more than 95% of the last 10,000 blocks (that's around 15 hours of continuous downtime).
+- Blockchain nodes will be slashed for 0.02% of their total delegation pool if they miss more than 95% of the last 10,000 blocks (that's around 15 hours of continuous downtime).
 - Resource nodes are suspended after 1 hour of downtime. In suspended state, they won't receive new upload/download tasks. They can be unsuspended and returned to normal operation.
-- Resource nodes are slashed after 24 hours of downtime. The data stored on their nodes will be copied to a new node and the cost for this operation will be covered from their activation deposit. Can be re-activated but the data they stored will become obsolete and should be removed from storage.
+- Resource nodes are slashed after 7 days of downtime. The data stored on their nodes will be copied to a new node and the cost for this operation will be covered from their activation deposit. Can be re-activated but the data they stored will become obsolete and should be removed from storage.
+
+---
 
 ## Activation fees
 

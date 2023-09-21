@@ -83,11 +83,10 @@ nav:
   - HowTo:
     - Setup a SDS Node: howto-install-stratos-sds-node.md
     - Setup a Full-Chain Node: howto-install-stratos-full-chain-validator-node.md
-    - Upload and Download from SDS: howto-upload-download-files-from-stratos-sds.md
+    - Port Forward / Firewall: howto-setup-port-forward-firewall.md
+    - Upload/Download from SDS: howto-upload-download-files-from-stratos-sds.md
     - Drive Pooling and Data Backup: drive-pooling-data-backup.md
   - Tips and Tricks:
-    - Auto Upload Files to SDS: automatically-generate-and-upload-files-to-sds-network.md
-    - Auto Claim Faucet: automatically-claim-faucet-testnet.md
     - Run a Node in Windows: howto-run-a-stratos-sds-node-in-windows-with-virtualbox.md
   - Possible Errors:
     - SDS Node is Suspended: sds-node-suspended-bad-performance.md

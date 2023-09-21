@@ -121,3 +121,5 @@ As an example, we can list a few applications (but not limited to):
     - Decentralized digital (NFT) market (Stratos Blockchain and Storage)
     - Decentralized social network (Stratos Database)
     - Decentralized machine learning, product design, data analysis, forecasting, etc (Stratos Computation)
+    
+

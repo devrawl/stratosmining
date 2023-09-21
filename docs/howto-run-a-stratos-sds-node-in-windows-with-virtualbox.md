@@ -228,4 +228,4 @@ Another possible case would be if your Windows is running a 3rd party firewall s
 
 If you do see port 18081 is open, it's now time for the fun part of installing a SDS node, or did you think this was over? 🥹
 
-Go to <a href="https://stratosmining.info/howto-install-stratos-sds-node/" target="_blank">HowTo Install SDS v0.9.0</a> guide and start directly from Setup part.
+Go to <a href="https://stratosmining.info/howto-install-stratos-sds-node/" target="_blank">HowTo Install SDS v0.11.0</a> guide and start directly from Setup part.

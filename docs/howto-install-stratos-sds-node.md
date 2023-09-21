@@ -4,11 +4,8 @@ author: DevRawl
 description: HowTo install and run a Stratos Decentralized Resource Node on Mesos Testnet and Mainnet.
 ---
 
-<small> Last update: March 12, 2023</small>
+<small> Last update: August 30, 2023</small>
 
-!!! danger "Warning"
-
-    At the moment, you can't setup a storage node on Mesos testnet. Will be soon updated.
 
 ## Rquirements
 
@@ -30,54 +27,15 @@ Running a SDS node requires the following resources:
 
 - <b>Software (tested version)</b>
 
-    * Ubuntu 18.04+
-    * Go 1.18+ linux/amd64 
+    * Ubuntu 20.04
+    * Go 1.19 linux/amd64 
 
+!!! warning
 
-## Server behind router
+    If you are behind router, you need proper port forwarding otherwise the node won't be able to start. 
 
-If you're running a server at home for example and you have a local network that has internet connectivity through a router, you have to forward the SDS port so it's accessible from the outside.
-
-For example, if your server has ip address 192.168.1.10, you have to open your router settings page, go to port forward and add a rule for port 18081. Every router configuration page is different but you should be looking for something like this:
-
-![](assets/images/Screenshot-2023-01-25-034231.jpg)
-
-After adding the rule, find your external ip:
-
-```
-curl ifconfig.co
-```
-
-Next, open a test listening port on your linux server:
-
-```
-nc -l 18081
-```
-
-Check your port conectivity on a site like <a href="https://portchecker.co/" target="_blank">PortChecker</a> .
-
-Enter your external ip address and port 18081, it should say that port is OPEN.
-
-You can now close _nc_ with Ctrl + C
-
-
-## If firewall is enabled
-
-To check if your firewall is active, type:
-
-```
-sudo ufw status
-```
-
-If you see Status: Inactive, skip this next part. 
-
-If you see Status: active, open the following port with:
-
-```
-sudo ufw allow 18081
-```
-
- 
+    Check [this guide](../howto-setup-port-forward-firewall) and test your port forward setup before trying to install the node.
+---
 
 ## Setup
 
@@ -89,14 +47,41 @@ sudo ufw allow 18081
 Login to a terminal as a user (avoid using root) and install the prerequisites:
 
 ```sh
-sudo apt install git build-essential curl snapd tmux --yes
-sudo snap install go --classic
+sudo apt install git build-essential curl tmux --yes
 mkdir $HOME/bin
 echo 'export PATH="$HOME/bin:$PATH"' >> ~/.profile
 source ~/.profile
 ```
 
+Install go lang version 1.19. Currently, the compilation will fail with newer versions of go.
 
+Check if you already have go installed:
+
+```sh
+go version
+```
+
+If you have a version newer than 1.19, remove it the same way you installed. For example:
+
+```sh
+sudo snap remove go
+sudo apt remove golang-go
+sudo rm -rf /usr/local/go
+```
+
+Install go 1.19:
+
+```sh
+wget https://go.dev/dl/go1.19.12.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.19.12.linux-amd64.tar.gz
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
+source ~/.profile
+go version
+```
+
+You should get `go version go1.19.12 linux/amd64`.
+
+---
 
 ## Compile executables
 
@@ -106,7 +91,7 @@ Continue with these commands in terminal:
 cd $HOME
 git clone https://github.com/stratosnet/sds.git
 cd sds
-git checkout tags/v0.9.0
+git checkout tags/v0.10.0
 make build
 cp target/ppd $HOME/bin
 ```
@@ -120,9 +105,9 @@ ppd version
 should return:
 
 !!! info
-    v0.9.0
+    v0.10.0
 
- 
+---
 
 ## Run config tool
 
@@ -155,15 +140,11 @@ This will start the configuration tool
     save wallet password to config file: <span style="color:cyan">press Y and enter</span>
 
 Result:
-!!! note
+!!! note ""
 
     finished changing configuration file **WalletAddress: st1xxxxxx** < save this for later
 
-!!! tip
-    If you had a wallet address on Tropos-4 and you insert the mnemonic phrase for that wallet, you will get a new wallet address - this is normal. 
-    
-    If it's the first time you generate a wallet, save the mnemonic phrase somewhere safe.
-    
+---
 
 ## Edit the configuration file
 
@@ -179,85 +160,30 @@ Save the resulting IP address for later. Now open the config file:
 nano $HOME/rsnode/configs/config.toml
 ```
 
-Find this line at the beginning of the file and replace 127.0.01 with the resulting ip address from curl ifconfig.co
+Make the following edits:
 
+```sh
+# Network address of the chain Eg: "127.0.0.1:9090"
+url = '52.196.88.238:9090'
+
+# IP address of the node. Eg: "127.0.0.1"
+network_address = 'external.ip.from.curl.ifconfig'
+
+# The first meta node to connect to when starting the node
+[node.connectivity.seed_meta_node]
+p2p_address = 'stsds15dchn80r73russ7pqjddvqdny0g9vyur8ckq7j'
+p2p_public_key = 'stsdspub1wg99sp4rq4vz5w8ae8uaj9mw9de4x4q8d7mg57ukwwztme7g7jjqzffkw0'
+network_address = '34.74.207.194:8888'
 ```
-network_address = '127.0.0.1'
-```
-
-Find this line and edit it to tropos-5:
-
-chain_id = 'tropos-4'
-
-Find this line:
-
-```
-stratos_chain_url = 'http://127.0.0.1:1317'
-```
-
-and replace it with:
-
-```
-stratos_chain_url = 'https://rest-tropos.thestratos.org:443'
-```
-
-Delete these lines
-
-```
-[[sp_list]]
-p2p_address = 'stsds1q363a55knlyq68zljjngspv3mt6e0zgx4fkwmc'
-p2p_public_key = ''
-network_address = '127.0.0.1:8888'
-```
-
-and replace them with:
-
-```
-[[sp_list]]
-p2p_address = 'stsds12uufhp4wunhy2n8y5p07xsvy9htnp6zjr40tuw'
-p2p_public_key = 'stsdspub1kst98p2642fv8eh8297ppx7xuzu7qjz67s9hjjhxjxs834md7e0sdnut0p'
-network_address = '18.130.202.53:8888'
-[[sp_list]]
-p2p_address = 'stsds1wy6xupax33qksaguga60wcmxpk6uetxt3h5e3e'
-p2p_public_key = 'stsdspub1yyfl7ljwc68jh2kuaqmy84hawfkak4fl2sjlpf8t3dd00ed2eqeqxtawdt'
-network_address = '35.74.33.155:8888'
-[[sp_list]]
-p2p_address = 'stsds1nds6cwl67pp7w4sa5ng5c4a5af9hsjknpcymxn'
-p2p_public_key = 'stsdspub16mz8w7dygzrsarhh76tnpz0hkqdq44u7usvtnt2qd9qgp8hs8wssx2rrlq'
-network_address = '52.13.28.64:8888'
-[[sp_list]]
-p2p_address = 'stsds1403qtm2t7xscav9vd3vhu0anfh9cg2dl6zx2wg'
-p2p_public_key = 'stsdspub1zarvtl2ulqzw3t42dcxeryvlj6yf80jjchvsr3s8ljsn7c25y3hqnetwsy'
-network_address = '3.9.152.251:8888'
-[[sp_list]]
-p2p_address = 'stsds1mr668mxu0lyfysypq88sffurm5skwjvjgxu2xt'
-p2p_public_key = 'stsdspub14v8yu6nzem787nfnwvzrfvpc5f7thktsqjts6xp4cy4a2j4rgm7s3ar0jv'
-network_address = '35.73.160.68:8888'
-[[sp_list]]
-p2p_address = 'stsds18xg40a4msgr5ndu2l7k5hv6pudemr9dufcel4w'
-p2p_public_key = 'stsdspub1wwhlr2jsfupjsp87ucd3ddy4s5ykcd4khqy3wg7san5kjlw8da5qa7cgcy'
-network_address = '18.223.175.117:8888'
-[[sp_list]]
-p2p_address = 'stsds1ftcvm2h9rjtzlwauxmr67hd5r4hpxqucjawpz6'
-p2p_public_key = 'stsdspub1q9rk5zwkzfnnszt5tqg524meeqd9zts0jrjtqk2ly2swm5phlc2qjnlj5c'
-network_address = '46.51.251.196:8888'
-```
-
- 
-
-Your entire config file should look like this 
-
-(except for the **YOUR-EXTERNAL-IP**, **stsds1xxx**, **st1xxx** and password part):
-
-![](assets/images/Screenshot-2023-01-25-032426.jpg)
 
 Save the file by pressing CTRL + X , then Y and Enter.
 
+---
 
 ## Get test tokens from faucet
 
 ```sh
-curl --header "Content-Type: application/json" --request POST --data '{"denom":"stos","address":"st1xxx"} ' https://faucet-tropos.thestratos.org/credit
+curl --header "Content-Type: application/json" --request POST --data '{"denom":"stos","address":"st1xxx"} ' https://faucet-mesos.thestratos.org/credit
 ```
 
  
@@ -270,7 +196,7 @@ You should get **ok** as a reply. The faucet has anti-drain limits so don't try 
 
 If, for some reason, you get an error or faucet is down, you can request some tokens on discord or telegram.
 
- 
+---
 
 ## Starting the node
 
@@ -296,7 +222,7 @@ tmux attach-session -t sds
 
 ## Activate node
 
-You will interact the node through a custom terminal. To open it, run these commands:
+You will interact the node through a custom terminal. Detach from the previous tmux or open a new SSH connection and run these commands:
 
 ```sh
 cd $HOME/rsnode
@@ -324,19 +250,10 @@ status
 
 This will return a reply such as the following, pointing out that everything is working fine: 
 
-!!! info
-    Activation: Active | Mining: ONLINE | Initial tier: 1 | Ongoing tier: 1 | Weight score: 5000
+!!! info ""
+    Activation: Active | Registration Status: Registered | Mining: ONLINE | Initial tier: 1 | Ongoing tier: 1 | Weight score: 5010
 
-## Check the rewards
-
-You can check the rewards either from the linux terminal or by directly loading this url in a browser:
-
-```sh
-curl -s https://rest-tropos.thestratos.org/pot/rewards/wallet/st1xxx
-```
-
-!!! tip
-    Replace st1xxx with your wallet address.
+---
 
 ## Support
 
