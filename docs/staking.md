@@ -2,11 +2,23 @@
 title: Staking on Stratos Chain
 author: DevRawl
 description: Stake your STOS coins by delegating to a Stratos Validator.
+hide:
+  - navigation
+  - toc
 ---
+
+<style>
+
+.md-typeset .admonition.narrow {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+</style>
 
 # General information
 
-!!! tip "Validator details:"
+!!! tip narrow "Validator details:"
 
     - Name: <a>0xDevRawl</a>
 
@@ -22,21 +34,15 @@ description: Stake your STOS coins by delegating to a Stratos Validator.
 
     - Unbonding period: <a>21 days</a>
 
-    - Explorer: <a>TBA</a>
+    - Explorer: <a href="https://explorer.thestratos.org/" target="_blank">Link</a>
 
     - Uptime:   <a id="counter"></a>
 
 ---
 
-# How to stake
-
-TBA
-
----
-
 # Frequently Asked Questions
 
-??? tip "What is a Validator?"
+???+ tip "What is a Validator?"
 
     One of the core components of proof-of-stake is a validator. Like miners on proof-of-work, validators are responsible for processing transactions on Stratos Network and, by doing so, helping secure the network. 
 
@@ -83,6 +89,12 @@ TBA
 ??? tip "Can you undelegate / redelegate?"
 
     Sure. If you want to change validators, you can redelegate your coins to a different validator, with 0 lock-up time. You can also undelegate and get the coins back into your wallet but there's a 21 days lock-up period for that action.
+
+---
+
+# How to stake
+
+TBA
 
 ---
 
