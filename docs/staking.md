@@ -42,7 +42,7 @@ hide:
 
 # Frequently Asked Questions
 
-???+ tip "What is a Validator?"
+??? tip "What is a Validator?"
 
     One of the core components of proof-of-stake is a validator. Like miners on proof-of-work, validators are responsible for processing transactions on Stratos Network and, by doing so, helping secure the network. 
 
@@ -94,7 +94,7 @@ hide:
 
 # How to stake
 
-TBA
+<div style="text-align: center;"><iframe width="960" height="540" src="https://www.youtube.com/embed/DHTZxMNr_Mk?si=msBIbdwSU4aMrlba" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 
 ---
 
