@@ -10,7 +10,7 @@ description: Tutorials and guides for node operators on the Stratos Decentralize
   }
 </style>
 
-<center>![](assets/home.png)</center>
+<center>![](assets/h.png)</center>
 
 !!! tip "About this page"
 
