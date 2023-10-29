@@ -1,5 +1,5 @@
 ---
-title: AMA on Twitter 27.19.2023
+title: AMA on Twitter 27.10.2023
 author: DevRawl
 description: Stratos Decentralized Network AMA on Twitter Spaces with Bin Zhu and Claire Bearzh, aired on October 27, 2023.
 ---
