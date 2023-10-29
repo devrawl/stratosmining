@@ -4,7 +4,7 @@ author: DevRawl
 description: Stratos Decentralized Network current status and roadmap. List of completed and upcoming tasks.
 ---
 
-<small> Last update: September 21, 2023</small>
+<small> Last update: October 21, 2023</small>
 
 ### Roadmap
 
@@ -21,7 +21,7 @@ description: Stratos Decentralized Network current status and roadmap. List of c
 | Jul 2023 | Mesos Permanent Blockchain Testnet | <g>Live</g> |
 | Jul 2023 | Mesos Permanent Storage Testnet | <g>Live</g> |
 | Sep 2023 | Stratos Blockchain Mainnet | <g>Live</g> |
-| Sep 2023 | Stratos Storage Mainnet | <gr>Upcoming</gr> |
+| Sep 2023 | Stratos Storage Mainnet | <g>Live</g> |
 | TBA | Stratos Computation Testnet | <gr>Upcoming</gr> |
 | TBA | Stratos Computation Mainnet | <gr>Upcoming</gr> |
 | TBA | Stratos Database Testnet | <gr>Upcoming</gr> |

@@ -4,7 +4,7 @@ author: DevRawl
 description: HowTo install and run a Stratos Decentralized Resource Node on Mesos Testnet and Mainnet.
 ---
 
-<small> Last update: August 30, 2023</small>
+<small> Last update: October 27, 2023</small>
 
 
 ## Rquirements
@@ -91,7 +91,7 @@ Continue with these commands in terminal:
 cd $HOME
 git clone https://github.com/stratosnet/sds.git
 cd sds
-git checkout tags/v0.10.0
+git checkout tags/v0.11.4
 make build
 cp target/ppd $HOME/bin
 ```
@@ -105,7 +105,7 @@ ppd version
 should return:
 
 !!! info
-    v0.10.0
+    v0.11.4
 
 ---
 
@@ -163,38 +163,12 @@ nano $HOME/rsnode/configs/config.toml
 Make the following edits:
 
 ```sh
-# Network address of the chain Eg: "127.0.0.1:9090"
-url = '52.196.88.238:9090'
-
 # IP address of the node. Eg: "127.0.0.1"
 network_address = 'external.ip.from.curl.ifconfig'
 
-# The first meta node to connect to when starting the node
-[node.connectivity.seed_meta_node]
-p2p_address = 'stsds15dchn80r73russ7pqjddvqdny0g9vyur8ckq7j'
-p2p_public_key = 'stsdspub1wg99sp4rq4vz5w8ae8uaj9mw9de4x4q8d7mg57ukwwztme7g7jjqzffkw0'
-network_address = '34.74.207.194:8888'
 ```
 
 Save the file by pressing CTRL + X , then Y and Enter.
-
----
-
-## Get test tokens from faucet
-
-```sh
-curl --header "Content-Type: application/json" --request POST --data '{"denom":"stos","address":"st1xxx"} ' https://faucet-mesos.thestratos.org/credit
-```
-
- 
-replace **st1xxx** with your wallet address 
-
-!!! tip
-    careful not to confuse it with p2p address which is stsds1xxx
-
-You should get **ok** as a reply. The faucet has anti-drain limits so don't try to claim it more than 1 time per hour or you will be put in cooldown and won't be able to claim tokens for 24 hours.
-
-If, for some reason, you get an error or faucet is down, you can request some tokens on discord or telegram.
 
 ---
 
@@ -229,11 +203,17 @@ cd $HOME/rsnode
 ppd terminal
 ```
 
-In this terminal, run:
+In this terminal, run the following commands to activate a resource node:
+
+Replace 1600 with the amount specific for your intended tier:
+
+- Tier1 - 800stos
+- Tier2 - 1600stos
+- Tier3 - 3200stos
 
 ```
 rp
-activate 2stos 0.01stos 1000000
+activate 1600stos 0.01stos
 ```
 
 Your node should start mining on its own or you can try after a few minutes to run:

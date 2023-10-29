@@ -1,0 +1,412 @@
+---
+title: AMA on Twitter 27.19.2023
+author: DevRawl
+description: Stratos Decentralized Network AMA on Twitter Spaces with Bin Zhu and Claire Bearzh, aired on October 27, 2023.
+---
+
+## Welcomes
+
+<claire>Claire</claire>
+
+All right, hello everyone. Welcome to another Stratos community AMA on Twitter space. This is Claire, very nice to meet everyone again. So we get it here today after the very exciting Stratos mean at launch. And we couldn't be more thrilled to discuss all the significant milestones and everything related to the overall Stratos ecosystem development in the near future.
+
+So before we dive into the question period now, we would like to begin with some updates given by our founder, Bin, related to the performance overall after the mainnet launch, some questions that you might be interested in regards to what are some of the plans in terms of partners in a pipeline and etc. So if you're ready lets dive in and give the floor to Bin.
+
+---
+
+## Updates
+
+<bin>Bin</bin>
+
+Hi Claire, thank you. I will just give you guys a little bit of basic updates. I rather give most of the time to the community to ask any question on your mind. Maybe I can talk more at the moment.
+
+So as you know, our Stratos chain and storage network were launched more than a month ago. Everything is going well. It's better than we expected. The chain is very stable and right now we have about 50 validators, but there are 28 validators right now online. We have done some calculations and right now most of the validators, especially our professional validator node providers…they can make money on that. This is very important, right? So I think we're happy to see that result. That's for the Stratos chain. 
+
+The other side is storage. I just mentioned yesterday on telegram and on Twitter. Actually, we already have more than 250 storage nodes online. Actually this morning, there are a couple more added this morning. So the total storage is already more than two PB. That's great. And in this month we also did some tiny upgrades in the storage as well. Next Monday we will do the other one.
+
+All the changes modification is based on the performance. It's not any big issues. Not any big bug we found. We just want to optimize all the configurations on the storage side, because we realize that most of the storage providers, they provide very decent hardware and good bandwidth to the storage network.
+
+But some of them have the size of the bandwidth and hardware probably will be a little bit slow, which will actually slow down the whole network. So most of the parameters and most changes actually we made, and we will make are to try our best to get rid of the lower nodes out of the network. To make sure most of the high performance nodes could work together. So that's what we're doing. And I think next week, the network performance will get better when we apply the new rule and new configurations.
+
+That's the basic update. Maybe now time to pass onto the community to ask questions. 
+
+---
+
+## Storage Network Dashboard
+
+<claire>Claire</claire>
+
+I suggest that will prioritize everyone who is online with us. If you have any questions, please feel free to raise your hand or just simply click the mic and we will invite you onto the stage. If we do not have anyone here with questions, then we do have a list of questions from the community that we can just ask one by one. But still, let's see if there's anyone here that has some questions to ask.
+
+While we are giving them some time maybe I can start by proposing one question from the community.
+
+So first of all, when can we expect the release of the dashboard displaying real time statistics and insights into the utilization and performance of the Stratos network?
+
+---
+
+<bin>Bin</bin>
+
+We already have the ticket and their developers are already working on that. To be honest this is not high priority right now, make sure the network is stable, get rid of the low performance node is more important for now. So after we make sure that the network is fully in good shape, we will go back to the ticket to continue to work on that. It's hard to say but hopefully we can see that dashboard maybe next month.
+
+---
+
+<claire>Claire</claire>
+
+So it's mostly based on the overall performance of the network, right? As to when we will launch a presentable dashboard for everyone to view the network’s data performance.
+
+---
+
+<bin>Bin</bin>
+
+Thank you. Also on the dashboard, all the SDS node owners will be able to use this dashboard to monitor their own nodes as well.
+
+---
+
+## Application to use the Storage Network
+
+<claire>Claire</claire>
+
+The second question is when can users expect a consumer facing application that enables upload and download of files and streaming of videos? 
+
+---
+
+<bin>Bin</bin>
+
+We haven’t launch that yet because we want to make sure the whole storage network is in good shape first. Otherwise even if we open to the end users, it is still not helpful. Right? So we're doing the first one. But for the videos uploading, later on users can use Stratos Wallet to do it. Currently we have two third parties who are cooperating with us, who are getting our grants, they are working on that as well. I think in the future you will have multiple options for which application dAPP you want to work with to upload or download files. Later you can probably watch videos directly from the dAPPs.
+
+---
+
+## Stratos wallet for iOS/Android
+
+<claire>Claire</claire>
+
+It's good to know that our internal Stratos team is working on the architecture part, and there are external parties who will be working on the UI or more user friendly apps to support this.
+
+Speaking about the wallet, we do have another question about when we will have the IOS, android, or Web wallet.
+
+---
+
+<bin>Bin</bin>
+
+Right now, the wallet created by our team is mostly based on the desktop for MacOS, Linux and Windows, but right now we have a third party team developing a wallet. They have already submitted an Android Wallet to Google Play Store and it is undergoing auditing at the moment. When the auditing process is done, it will be available on the Google Play Store. When that is done that third party will work on the Apple Store app. They just updated me last night.
+
+---
+
+## Status of grant program
+
+<claire>Claire</claire>
+
+You mentioned previously that there are two teams that are already working on different kinds of applications on top of the Stratos ecosystem. Can you give me more information about what is the current status of the grant program? Maybe more details about the number of applicants, as well as the projects that have successfully progressed to the next stage.
+
+---
+
+<bin>Bin</bin>
+
+We have already approved two teams. One is working on the mobile wallet, Android is first. Maybe IOS will be the second for them. Because they are a third party which is not under our control. Later they may also work on some UI on the mobile app so people can upload and download their files.
+
+That's one. The other team actually has some experience working in this field. They have already built a very great dAPPs based on the IPFS File Coin. But right now they are also very interested in Stratos, so they want to build a brand new application upon the Stratos network.
+
+So that's the second team, and also we have been in contact with a third team. They may build some domain services on Stratos. But for the second and third one, I cannot provide any timeline but we will probably work together with them to build those applications.  They will send us a proposal, some of their designs and ideas. Then get our approval or maybe some technical support from us. Then they will work on that. They have already started working. Bu I cannot give you the timeline when they will finish it.
+
+It is good timing that they are starting work on our network now as it is much more stable. We have also received around roughly 20 applications. Some teams want to build something on Stratos. Our team is reviewing all the applications now. The team has to be decent and have good ideas. 
+
+We will audit each of them. We cannot work with all of them but just with those that we feel are beneficial for us. 
+
+---
+
+## Strategic partnerships
+
+<claire>Claire</claire>
+
+I can ensure that we will review all of the grant applications carefully. We do want to select the serious builders to build on top of Stratos and to best utilize this grant. We're still promoting the grant program to reach different kinds of developers. We want to attract other builders to apply for it.
+
+
+Could you share some insights about the strategic partnership Stratos is planning to establish to enhance the adoption of the decentralized storage network?
+
+---
+
+<bin>Bin</bin>
+
+We have two Canada partnerships. One which we already established before we launched the mainnet. We are going back to revisit all the partners we announced. We will go back to those teams and will provide all the technical documents, and tell them what we are already capable of doing. 
+
+After they receive the information they will decide when they probably will work on that, or when they will do some migrations. This is out of our control, and I think they may probably also need some help from our technical team. When they are ready and when they start using Stratos then they will notify us. Probably we will announce that, based on the case by case. That's the partnership we had established before the mainnet.
+
+We are looking for some new partnerships. Right now we're doing so via our VC network, the Twitter X network, and our close network. We will talk to some other traditional businesses and crypto business projects together. We will do some showcases. I will show some examples to them to show what we could do and why they should choose us, why they should migrate onto Stratos.
+
+We are making business connections every week. When they decide, when they give us permission, when they feel comfortable to do it, we will announce that partnership one by one, case by case. Right now I cannot give out any more details. 
+
+---
+
+## Exchanges
+
+<claire>Claire</claire>
+
+Thank you for the transparency and update.
+
+The next question is in regards to exchange listing. Are there any upcoming listings of the STOS token on major exchanges, and if so, can you provide any specific details or timeline regarding these listings?
+
+---
+
+<bin>Bin</bin>
+
+Working and listing on exchanges is tricky. This is one of the most frequent questions discussed in the community. To be honest, we had communicated with some exchanges about listing our token. But I have to say that those exchanges were not top exchanges. Not top ten exchanges. We have communicated with exchanges between top 10 to 30. When we checked the liquidity of some small coins like Stratos (low market cap) on those exchanges, the number that they provided did not match some numbers we researched by ourselves.
+
+We feel with some small exchanges, especially in the current situation, they won't add any help to our liquidity. They will even further divide liquidity from current exchanges, which is even worse. So thus, we have not been prioritizing listing to new exchanges under the top ten right now.
+
+We want to dedicate our efforts onto gate.io first. We will work on Gate and try to provide more liquidity on gate. Gate has already supported our mainnet. You can deposit native Stratos already. Later, we really want to list the token on some decent exchanges. Maybe some exchange in Korea, some top exchange, like OKEX, Kucoin or later if possible we also like Binance, Coinbase and Kraken. We really want to be partner with the top exchanges which really can help with the liquidity. But lower exchanges we are not that interested in the current environment.
+
+---
+
+## Total used space for storage
+
+<claire>Claire</claire>
+
+Back to the storage network, how much storage space has been allocated and utilized on the Stratos network since its launch? and are there any projections for its expansion in the near future.
+
+---
+
+<bin>Bin</bin>
+
+It's not hard for us to estimate how much storage we have, but we haven't run the analytics process for you to check in real time yet. We could get the information of how much data is stored via the metanodes. That will be one feature of the analytics dashboard of the storage network when we launch it. Everyone can check by themselves.
+
+---
+
+## Development Roadmap
+
+<claire>Claire</claire>
+
+So could you please provide some information about the development roadmap for Stratos over the next twelve months, highlighting any major milestones or key objectives the team is aiming to achieve?
+
+---
+
+<bin>Bin</bin>
+
+I think the plan has never changed. Like I said before, since Stratos blockchain and storage network mainnet was launched, we have not been rushed to work on the second component, like the computing component or database component. We really want more people to use the storage first. We really encourage the people to store their data on our Stratos.
+
+So when we feel comfortable and satisfied, we will launch the second component, we will announce that. But right now we don't have a detailed plan to tell you. We need to watch how it's going with the storage first, how many nodes participate and how many users, how many businesses have stored the data on the storage network. That will be the trigger for us to move on.
+
+In the meantime, we cooperate with the third party, like grants applicants or other third parties who want to participate in our storage network. We will focus on that. Also, the team will probably work separately on some set project or dAPPs, to improve our storage.
+
+Another plan based on Stratos storage is related to our unique consensus algorithm called Proof of Traffic. Proof of Traffic means for any SDS node, the more traffic you provide the more you will earn. The next idea which is made possible by Proof of Traffic is the ability to reward content producers.
+
+Let me provide you an example similar to what Twitter X does. The more views and likes an X post receives, meaning you promote more traffic on the platform, the more X rewards you. 
+They give a share of their revenue to you. With Stratos, you can do the same thing. 
+
+It means that we can create a mechanism where content providers who have good videos, audios, short videos or content that attract people, and hence traffic, can be rewarded a share of the traffic revenue. The content producer can upload their content to Stratos and have the content linked to their wallet address to receive the traffic revenue share. 
+
+If you create videos and a lot of people watch it, e.g. You upload 100 videos… a thousand people or maybe a hundred thousand people may watch it. Imagine how much traffic you may generate. This could be petabytes of traffic. How much reward will you get? It would be a huge amount. With this idea the content provider will benefit, and SDS node providers will also benefit. 
+
+Note, we did some basic calculations. When we launch this program we will probably attract some youtubers or other content producers. They will receive much more reward compared to if they uploaded to Youtube or upload to Twitter X. So this probably will be a big thing for Stratos.
+
+I think these are some very exciting features we will launch soon, probably in a month, or two months later. We will contact some content providers. You may upload one piece of content, then may receive ten STOS, or even hundred STOS in the following day or month.
+
+I think this is a very unique feature that will be launched by Stratos compared with any of the other storage service provider such as Arweave, filecoin or any others. None of them has this feature.
+Stratos has that because Stratos was born for that. Stratos was born for hot data. Hot data is data with traffic. And where does the traffic come from? From good content.
+
+---
+
+## How file slices work
+
+<claire>Claire</claire>
+
+Thank you for sharing this very exciting new features that will be added to the Stratos Storage network, which will also enable developers who are interested in building any kind of content creation type apps.
+
+Another question we have in regards to the technical specifications of Stratos is how many slices a file gets split up into by default? What's the size of the slice? And also how many copies of those slices are stored on the network.
+
+---
+
+<bin>Bin</bin>
+
+Right now, for a general file each of the slices is 30mb. We did some tests and 30mb is a near optimal number for each slice. To make sure it's balanced. We don't want too many slices, we also don't want the slices too big or too small. So 30mb is a good size. We calculated based on a lot of tasks. That's for general files.
+
+If it's a video, the slice size will be a little bit smaller. It is around 10mb. Because when we play the video on Stratos, they will cost more CPUs, so we want to have more parallel processes during the same time. 
+
+If you have a 100mb file to upload, your file will be separate to four slices, and each of the slice will have five replications, so your file will have five copies distributed on the Stratos storage network. 
+
+If any copies of these slices are lost, or any server was offline and you lose one slice, Stratos metanodes will know and they will create another copy. Funds from the offline SDS node’s wallet will be used to pay for the traffic needed to create another copy. 
+
+---
+
+## Chain explorer update
+
+<claire>Claire</claire>
+
+Thanks for explaining that. For the folks who still have questions in regards to this topic, feel free to continue discussing this in telegram and that might be easier to explain through text with numbers and examples.
+
+Another question we have is in regards to the new website along with the update of the Blockchain Explorer displaying data regarding APR and market cap. Can you give an update on this?
+
+---
+
+<bin>Bin</bin>
+
+Actually we will launch the new big dipper explorer very soon. We are still testing. Probably, we will launch it very soon. From the new Big Dipper explorer you can see the circulation and market cap. You also can check the different transactions including transfer file and upload volume report. The new explorer will show you much more detail information than the current version.
+
+We will launch the very soon. In the meantime, we will contact Coingecko and Coin Market cap and give them API. Hopefully they could integrate our new API very soon so we can see in real time what's the current circulation supply and market cap.
+
+---
+
+## New website
+
+<claire>Claire</claire>
+
+And I can also add a little bit in regards to the new website. The overall development is nearly finalized and we're just reviewing some new content. We are also waiting for the latest version of the Explorer that will be able to sync up with the new website. So hopefully probably in a month or so we will be able to have the new website. 
+
+Does anyone have any question that you would like to raise and discuss in real time with us here today on Twitter space?
+
+Hello, Jim.
+
+---
+
+## How to use Stratos storage
+
+<o>Speaker</o>
+
+And I just wanna, I just wanna ask a question right, you know, i'm not very technical or anything like that. For like newcomers what exactly the Stratos do? What's it gonna do in the future? I know you got a blockchain and storage. What exactly can people do on it? Just so I can get a better understanding.
+
+---
+
+<bin>Bin</bin>
+
+All companies need storage. Storage is needed like we need the air and water. How can we promote Stratos to make them feel comfortable and trust using Stratos? For the end user it is very important. The third party and our team are working on the dAPPs so any user can have their wallet, log in based on their own credentials, upload their own video, audio or photo, or any data.
+
+Then we also want people to be able to watch or listen to the music from that as well. That's for the end user. This will be an alternative to Dropbox or Google Drive.
+
+The second main usage of Stratos is enterprise usage. Large companies want to save some sensitive information or their users privacy information. Sometimes due to regulations, they cannot use the public cloud. They need to build their own private cloud. This is where Stratos could be an option as well. 
+
+For crypto projects like NFTs, some GameFI, or even some blockchain projects where their blockchain is too big and they cannot keep all the blocks online. They may choose to store offline some previous blocks. They also can save their blocks on structure as well. Storage is needed on any narrative related to computer use.
+
+We could have a lot of use cases. We need to target those above mentioned different sectors to work with them to help them. We need to promote trust in Stratos and convert them to be our customers. So that will be the long run goal. We will do everything step by step and to grow the Stratos business.
+
+---
+
+## AR / FL comparison 
+
+<o>Speaker</o>
+
+What comparison are we to Arweave and Filecoin? And what about ICP? Are they all similar? or Can Stratos do more?
+
+---
+
+<bin>Bin</bin>
+
+I think Stratos is better because of the performance and Stratos storage architecture. Stratos is faster than Arweave and Filecoin. Stratos’ performance is better.
+
+From the tokenomic side, because Stratos’ is runs on Proof of Traffic, users pay based on the traffic. Unlike Arweave, where you just pay once and you get "permanent storage" (~200 years). I don't believe in the pay once model because that kind of service never exists in the real world. I don't think that could ever exist. Maybe that one payment can store that file for a couple of years… but "permanent storage" is just not practical. 
+
+I don't believe in that business model. For Filecoin, I feel Stratos is more reliable. The reason is if any of your nodes, and a part of your data was lost because some nodes are offline, Stratos can help to recover it automatically. 
+
+But on Filecoin, that does not happen. They don't have that functionality in their core storage protocol. All files uploaded are dependent on Filecoin miners. They will decide what kind of file they want to store. You only can encourage them, but if they just don't want to continue storing the file, it will be lost. So on Filecoin and IPFS we cannot 100% guarantee that a file will be available or not.
+
+Filecoin tries to solve that by increasing the reward to some Filecoin miners, but they still have the fundamental issues because IPFS protocol architecture is totally different to Stratos. So I feel that they have fundamental issues regarding reliability. Stratos solves that issue of data resiliency.
+
+ICP, Internet Computer, mostly provides the computing power not storage. They have recently realized without storage their computing power cannot do much. Right now they are trying to add storage but they are not a storage network. The ICP nodes provide computing power but they have very limited storage. ICP also works very differently. Their network only has 21 nodes, it doesn't matter what you save to their ICP. You are using ICP network they only have 21 nodes for you. It's not a hundred. Not a thousand. Only 21. ICP are very picky with their miners so they don't have much miners. If you want to be the miner providing computing service to ICP you need to provide a very high performance computer. Stratos network is purely decentralized. ICP is not. So I don't want to say they're worse or we are better.
+
+With Stratos all your data will be distributed to hundreds of nodes, not only to about 21. Stratos distributes multiple copies of your files to different geographical locations. Asia, Europe, North America, everywhere. So we, that's why we feel we are more safe and we are more decentralized.
+
+But in the future, when we launch the computing component Stratos will be able to directly process the data you store in Stratos storage network. At that time, we could provide very similar functionality like ICP can do now.
+
+---
+
+## Stratos and AI
+
+<o>Speaker</o>
+
+What do you think about Arweave having other blockchains’ historical data and AI data stored upon it? Can we have the same? Will other blockchains start using us?
+
+---
+
+<bin>Bin</bin>
+
+Yeah. Actually, AI and blockchain are two different things. Before I created Stratos, I was technical co-founder of an AI company. I know how AI works. And just some people... To be honest, I feel a lot of AI projects in the market cannot work out because they're just using some GPUs because Ethereum cannot use them anymore to mine. So that GPUs need to find the way to continue to produce some money.
+
+So a lot of people, they find this is the way, but GPU can do what? Okay, can do calculation. Can do what calculation? Okay, maybe AI is good at narrative, but could they really work out? I really doubt that. The reason is most of the AI projects right now, they say how many GPUs they have. But people will think AI is really based on the GPU? Yes, but without any data, AI can do anything? You can research the ChatGPT. You can research any big AI company in traditional way, not crypto. You will feel they are not only building their powerful GPU data center, they need to consume huge, huge data. They need large data to make AI smarter. GPU or computation just make this process faster.
+
+Without the data, it doesn't matter how many GPUs you have, that AI is still stupid. So without the data, only GPUs, they cannot do much. That's why I'm don't feel there are some AI projects that make sense to me. They only generate some tokens and some people are just using GPUs to get tokens to sell it to get the money back. But how the big companies are using their GPUs? I don't know how they ingest the data to their GPU. I don't know. Their network is not stable, where they save the data, where the GPU to read the data from. They cannot give you a solution. They cannot do anything. That's one. 
+
+The second thing, people only care about the GPUs. But most people, they don't know the GPU is limited because the GPU only can do very simple calculations, float calculations. But from GPU to GPU, they need to do some logic calculation, which can only be done by CPU. If you do your own research, you go to AWS, you go to Google Cloud. If you want to find some good GPU servers, you will realize in that servers, they need very powerful CPU as well.
+
+They need good bandwidth. They need good storage. Without a good CPU, the GPU can do nothing as well. So that's the second case I feel most of the GPU mining AI tokens, it's not making sense. Only GPUs, they cannot do much because that GPU is only designed to calculate the hash code to mine the Bitcoin in the early stage, then the Ethereum hash code. But to run the AI, the calculations are more complicated and they need the CPU to cooperate with them as well. Only GPU, it can't work. If you have an Ethereum mining computer, I have one in my home, in my basement. So you have six GPUs. You have very, very bad CPU because you run the hash code. They don't need much CPU work. And you have very bad Motherboard. You have very bad HDD disk. That's all the Ethereum manumeration, typically manumeration. This manumeration can work to the AI computer? No, no way. But most of the people just don't realize that. That's why most of the AI project in the market, don't make sense to me.
+
+Yeah, that's my personal opinion. But you guys can just do your own research.
+
+---
+
+
+<o>Speaker</o>
+
+Thank you. I trust your project. I love it. I think it's such a transparency, and I'm so excited to be on this journey with you. Thank you.
+
+---
+
+## Content creatos and Stratos
+
+<claire>Claire</claire>
+
+I saw another question in regards to the feature that you just mentioned for content creators. So how is Stratos going to make it clear that YouTubers and so on, they can actually get more rewards if they do it on Stratos network. Do we have a number?
+
+---
+
+<bin>Bin</bin>
+
+I don't have a number, I'll just give you an example. So if they're YouTubers, they have 10,000 or 100,000 followers and each of the followers is watching the video. So if you have one file, one video, it will be watched for maybe 100,000 times. You can calculate how much traffic you generated, and then you will realize that this is a big traffic. Even if you just get X percentage of the traffic is still huge. 
+
+But that's what you get. This is organic reward. But based on the Web2, okay, you're a YouTuber, what do you get? Because YouTube company, Google company, they will give a very small percentage of their reward based on how many ads show on your page. That's how they make money. But from here, you get your money from what? From your followers that directly give it to you. So that will be huge. That's totally different. Different business model. I don't want to say it, but this business model is similar like OnlyFans. You guys know OnlyFans, right? So similarly, you can create content to show people how to cook, how to do exercise, you get followers.
+
+They will pay you for your subscription. But for Stratos, no, you don't need. That's why we are better, we could be better than only fans because even you create some good videos, maybe not your personal videos, but some video you want to explain a story, you want to do anything, they don't know who you are, they don't know where you are, they cannot find you because they don't pay credit card. 
+
+The only fans company know who you are. You need to register. But for us, it's no KYC. So I think this is even easier way, better way. This is purely Web3 content sharing network. It's also with the good reward. But any Web2 company, you need to give all your personal information to that company. They will decide if they want to promote you or not. They will decide how much you will get. For you, you don't know anything. They give you two dollars or they give you $20. They give you the number they want you to see. It's not full transparency. Actually, they're non-transparency. They will decide how much they will give to you. But from here, you can see how many traffic you generate, how much reward you get, and each of the SDS provider, they also know how much they get because it's fully transparent and no KYC bases. I think this is most of the powerful part of Stratos.
+
+---
+
+## New round of fundraising
+
+<claire>Claire</claire>
+
+Thanks, Bin. I'm sure once we are near to announce this new feature, there will be more clear guidelines and rules laid out for everyone to better understand this new feature. I think this will be the last question for today's AMA. Are we looking for another round of fundraising?
+
+---
+
+<bin>Bin</bin>
+
+Yes. But now it's not that good time, right? Yeah, the market is still not very stable, we are still in bear market. We still have funds, we will watch the market and we will see.. 
+
+But for now, regarding the new features, i talked with some VCs, friends of mine, they are super excited because they don't know any other Web3 project that's doing that - rewards based on storage traffic  because we combine the storage and rewards organically. So i don't know what will happen but we will see.
+
+---
+
+<claire>Claire</claire>
+
+Thank you so much for all the honest answers and updates in regards the projects and overall development so I don't think we have any other questions for today. This AMA is also being recorded as well if you wanna look back, um, to gain some insights about some of the question that you're missing.
+
+Once again, we're deeply grateful for everyone who has been with us for this long journey, and now we are at the post mainnet stage where there will be more work continuously, polishing our network to making sure it will be at its finest for the performance, and meanwhile expanding the ecosystems through partnerships and different kind of demos with traditional partners.
+
+So we do appreciate everyone to continue supporting us and helping us spreading the word.. 
+
+---
+
+## Final thoughts on token price
+
+<bin>Bin</bin>
+
+I saw someone ask because this is a challenging question but again the Stratos team really want to be fully transparency to the community. This challenging question is asked by a lot of people in the community.
+
+So for some people is disappointment because they feel when Stratos main net was launched, the Stratos price should get higher, better, I fully understand.
+
+But I will let you know one of the reason, because, you know, when we launch the Stratos mainnet, we unlocked a million tokens from the Tropos test network, because we had a lot of people participating in the Tropos network for more than a year. One year and a half, even close to two years, they spent their time and they spend their servers resources and network to help us to test all the cases. 
+
+So we release a million tokens to a lot of a wallet, you guys know, but there are around 60 %, around 600,000 tokens, which they bridged out as ERC20 because they need to sell to get there cost back right so that's the reason the token price not going higher but then going lower a little bit because there's sell pressure,
+
+But I watch them. I check most active wallets that are trying to sell, but right now I give you some numbers, in regards of transparency, there are still around 300,000 tokens that they are trying to sell, but they just try to sell every couple of days, and they don't try to sell a lot. Each time they try to sell 20,000, 30,000, they try to keep the price not lower than $0.47.
+
+That's my personal feeling but I just let you know that's the main reason, because the market is not good, the liquidity, not very good and in this situation, when not too many people want to buy the token so that's why they try to sell it slowly but I understand because they already spent more than a year to work with us, with their servers, with all their cost so they need to get paid back something. So that's why they sell portion of the token. That totally makes sense and that's the major reason after mainnet launch for the token price is going lower.
+
+I just want everyone in the community to know that's the major reason, not other reasons. The Stratos team didn't sell any tokens. Before, now, or in your future, we won't do that.
+
+---
+
+<claire>Claire</claire>
+
+Oh, thank you been for your transparency and bringing this critical kind of topic up, I'm sure everyone from community will feel how genuine you are with this answer.
+
+I think we'll be able to end this AMA, and we'll hear each other next time.
+
