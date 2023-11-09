@@ -86,6 +86,7 @@ nav:
     - Port Forward / Firewall: howto-setup-port-forward-firewall.md
     - Upload/Download from SDS: howto-upload-download-files-from-stratos-sds.md
     - Drive Pooling and Data Backup: drive-pooling-data-backup.md
+    - Token Migration with Gate.io: token-migration-using-gateio.md
   - Tips and Tricks:
     - Run a Node in Windows: howto-run-a-stratos-sds-node-in-windows-with-virtualbox.md
   - Possible Errors:
