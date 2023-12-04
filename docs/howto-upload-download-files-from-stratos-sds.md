@@ -4,15 +4,11 @@ author: DevRawl
 description: This article explains how to use ppd executable to upload and download files on and from the Stratos Decentralized Network.
 ---
 
-<small> Last update: March 12, 2023</small>
+<small> Last update: December 4, 2023</small>
 
-!!! danger "Warning"
+!!! tip "Note"
 
-    At the moment, you can't setup a storage node on Mesos testnet. Will be soon updated.
-
-If you are running a SDS node, it's beneficial to the network to upload and download files, in order to generate traffic and network load, which helps testing the stability and limits of the storage network.
-
-This is not a mandatory step but as a testnet participant, it's kind of your duty to do so :)
+    At the moment, you can only upload and/or download files through a running SDS node.
 
 ### Get some files
 
@@ -56,6 +52,14 @@ this will purchase ozone for 1 stos.
 !!! note
     Ozone is the currency spent when paying for storing data on the storage network. It's a token used only in the stratos ecosystem, you cannot withdraw it, trade it or sell it. It has no value in the real world.
 
+### Register the node
+
+Run the following command in ppd terminal:
+
+```sh
+rp
+```
+
 ### Upload a file
 
 To upload a file to a sds node, run this command in ppd terminal:
@@ -68,6 +72,7 @@ Response:
 
 !!! info
     fileName~~~~~~~~ video02.avi
+
     fileHash~~~~~~~~ v05ahm56nv1p2s941ib8pdk75q8oe61fe874alc2
 
 This will give you an unique fileHash for this file. After the upload is completed, run this command to make it available for others to download:
@@ -93,9 +98,7 @@ getsharefile yyLA2h_0f1e9398bfdf166y
 !!! warning
     Keep in mind: this is not a way to generate rewards. You will only be doing this to test the network.
 
-The files you are uploading and downloading, are stored on other people's resource nodes and they are getting the rewards. But if other people do the same thing as you, their files might get stored on your resource node and you will then get a reward.
-
-It's basically a community effort, everyone takes part and everybody wins.
+The files you are uploading and downloading, are stored on other people's resource nodes and they are getting the rewards. 
 
  
 
@@ -109,25 +112,29 @@ To download these files, you will need to have ozone (see upload section on how 
 
 Open **ppd terminal** and run any or all of these commands:
 
-20 MB file:
-```
-getsharefile gTqe3Y_e41bd742ab460b66
+
+```sh
+getsharefile M4a24B_554279dff1dde78b
+getsharefile sRcjQ3_6e12d3a303c77053
+getsharefile pb4RFB_d78b535a6d74d947
+getsharefile juxQsw_2155a990c0ebfa52
+getsharefile byunZp_ad15cfc463c04230
+getsharefile lXt6q7_b3b4a5121ebc8535
+getsharefile fnW2dP_05b51f08ecc60b6e
+getsharefile iiIx9l_68c709bccffa63a9
+getsharefile iy4h48_b2c77f855f0a898e
+getsharefile NjLdNK_2ddeb1ed5be1de97
+getsharefile j9LUEx_90ed3f65cf4b1ef3
+getsharefile L1DSL1_1ef999af0b0db173
+getsharefile Do07HI_62d14e56c6c50b67
+getsharefile L6yAq7_1591594af56af540
+getsharefile jCTAMZ_b7b3f59f72fdcac5
+getsharefile yHdr3R_6fe75bfbf0fe641f
+getsharefile jVPW3B_f57ac139f54e9b45
+getsharefile CWDf0h_2ac8ea474edb36fa
+getsharefile vvpE6t_5f98c99594c6c674
 ```
 
-50 MB file:
-```
-getsharefile WdIDYN_fb12948cf78315b2
-```
-
-100 MB file:
-```
-getsharefile KG3glX_ffce0e6ae2507de7
-```
-
-500 MB file:
-```
-getsharefile z2FNvk_1c0acadfa02b2c63
-```
 
 
-Thank you for being a part of Stratos testnet!
+Thank you for being a part of Stratos network!

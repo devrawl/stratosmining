@@ -85,17 +85,12 @@ nav:
     - Setup a Full-Chain Node: howto-install-stratos-full-chain-validator-node.md
     - Port Forward / Firewall: howto-setup-port-forward-firewall.md
     - Upload/Download from SDS: howto-upload-download-files-from-stratos-sds.md
-    - Drive Pooling and Data Backup: drive-pooling-data-backup.md
     - Token Migration with Gate.io: token-migration-using-gateio.md
-  - Tips and Tricks:
-    - Run a Node in Windows: howto-run-a-stratos-sds-node-in-windows-with-virtualbox.md
   - Possible Errors:
     - SDS Node is Suspended: sds-node-suspended-bad-performance.md
     - Validator is Jailed: stratos-validator-jailed-unbonded.md
-    - Wrong Block Header AppHash: stratos-validator-handshake-error-replay-wrong-block.md
-    - Stopping Peer for Error EOF: stratos-validator-stopping-peer-error-eof.md
-    - Socket Too Many Open files: stratos-validator-socket-too-many-open-files.md
   - Community:
+    - Stratos x DeepCoin 01.12.2023: Stratos-x-DeepCoin-1-12-2023.md
     - Stratos x DeepCoin 28.11.2023: Stratos-x-DeepCoin-28-11-2023.md
     - AMA on Twitter 27.10.2023: stratos-ama-twitter-spaces-27-10-2023.md
     - AMA on Twitter 03.08.2023: stratos-ama-twitter-spaces-03-08-2023.md

@@ -1,8 +1,10 @@
 ---
 title: Stratos X DeepCoin AMA Twitter 28.11.2023
 author: DevRawl
-description: Stratos Decentralized Network AMA on Twitter Spaces hosted by DeepCoin with Bin Zhu and Claire Bearzh, aired on November 28, 2023.
+description: Stratos Decentralized Network AMA on Twitter Spaces hosted by DeepCoin with Bin Zhu and Akif Seyhan, aired on November 28, 2023.
 ---
+
+# Stratos X DeepCoin AMA Twitter 28.11.2023
 
 ## Welcomes
 

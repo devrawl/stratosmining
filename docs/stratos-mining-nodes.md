@@ -4,7 +4,7 @@ author: DevRawl
 description: What type of nodes are available on Stratos Decentralized Network. What are the requirements and what are the expected rewards.
 ---
 
-<small> Last update: September 21, 2023</small>
+<small> Last update: December 4, 2023</small>
 
 Currently, there are two types of nodes you can setup and run:
 
@@ -20,7 +20,7 @@ The full-chain validator is a full-node that participates in the Stratos Chain b
 
 ## SDS resource node
 
-<small>(Available to be operated in <g>TestNet</g> / <o><del>MainNet</del></o>)</small>
+<small>(Available to be operated in <g>TestNet</g> / <o><g>MainNet</g></o>)</small>
 
 The Stratos Decentralized Storage (SDS) network is a scalable, reliable, self-balancing elastic acceleration network. We can simply take it as a decentralized file system suitable for running on general-purpose hardware.
 

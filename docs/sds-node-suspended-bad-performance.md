@@ -4,11 +4,7 @@ author: DevRawl
 description: How to unsuspend a Stratos Resource Node if it got suspended for bad performance.
 ---
 
-<small> Last update: March 12, 2023</small>
-
-!!! danger "Warning"
-
-    At the moment, you can't setup a storage node on Mesos testnet. Will be soon updated.
+<small> Last update: December 4, 2023</small>
 
 
 ## Full error
@@ -16,12 +12,14 @@ description: How to unsuspend a Stratos Resource Node if it got suspended for ba
 While running a SDS node, you might see this error sometimes about being suspended:
 
 !!! failure "" 
-    register\_to\_sp.go\:100: This node is suspended due to bad performance, cannot start mining
+
+        register_to_sp.go:42: Register failed This node is suspended due to bad performance, cannot register.
 
 Or, when you run the **status** command, you sometimes might see this:
 
 !!! warning ""
-    Activation: Active | Mining: SUSPEND | Initial tier: 1 | Ongoing tier: 0 | Weight score: 8000
+
+        Activation: Active | Registration Status: Unknown | Mining: SUSPEND | Initial tier: 2 | Ongoing tier: 0 | Weight score: 8000
 
  Both cases show that your node is suspended and it's not currently mining. This could be a result of many issues, but there are two main ones:
 
@@ -31,7 +29,7 @@ Or, when you run the **status** command, you sometimes might see this:
 Usually if the issue is on your end (second case), you need to make sure that port 18081 (or whatever port you setup in config) is not firewalled. Also, if you are behind a router, you need to forward port 18081 to whatever local ip you're running SDS on.
 
 !!! info ""
-    Read about how to port forward or unfirewall your connection in the <a href="https://stratosmining.info/howto-install-stratos-sds-node/" target="_blank"> SDS Node Tutorial</a>
+    Read about how to port forward or unfirewall your connection in the <a href="https://stratosmining.info/howto-setup-port-forward-firewall/" target="_blank">Port Forward Overview</a>.
 
 
  
@@ -48,30 +46,17 @@ ppd terminal
 Next, you need to update the stake with +1 STOS:
 
 ```
-updatestake 1stos 0.01stos 1
+updatedeposit 1stos 0.01stos
 ```
 
 Wait for the following messages:
 
 !!! info ""
-    update\_stake.go:51: The UpdateStake transaction was broadcast
+        [INFO] 2023/12/04 08:44:29 update_stake.go:44: get RspUpdateDepositPP RES_SUCCESS
+        [INFO] 2023/12/04 08:44:37 update_stake.go:59: The UpdateDeposit transaction was broadcast
+        [INFO] 2023/12/04 08:44:39 update_stake.go:74: get NoticeUpdatedDepositPP, DepositBalance: 1603000000000000000000, NodeTier: 2, Weight_Score: 2000
+        [INFO] 2023/12/04 08:44:45 state_change.go:32: State change has been completed, will start registering automatically
 
- 
-
-## Activate the mining
-
-Wait a couple of minutes after the updatestake command, then inside ppd terminal, run:
-
-```
-startmining
-```
-
-You should get the following messages:
-
-!!! info ""
-    register\_to\_sp.go\:100: This node is suspended. A request to unsuspend has been sent. The node will start mining automatically if the request is successful.
-
-    register\_to\_sp.go:104: start mining
 
  
 ## Confirm
@@ -85,4 +70,4 @@ status
 You should see something similar to:
 
 !!! info ""
-    Activation: Active | Mining: ONLINE | Initial tier: 1 | Ongoing tier: 1 | Weight score: 5000
+        Activation: Active | Registration Status: Registered | Mining: ONLINE | Initial tier: 2 | Ongoing tier: 2 | Weight score: 2000
