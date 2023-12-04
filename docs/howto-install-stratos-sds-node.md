@@ -91,7 +91,7 @@ Continue with these commands in terminal:
 cd $HOME
 git clone https://github.com/stratosnet/sds.git
 cd sds
-git checkout tags/v0.11.4
+git checkout tags/v0.11.7
 make build
 cp target/ppd $HOME/bin
 ```
@@ -105,7 +105,7 @@ ppd version
 should return:
 
 !!! info
-    v0.11.4
+    v0.11.7
 
 ---
 
