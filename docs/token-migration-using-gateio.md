@@ -45,7 +45,7 @@ There are two ways to move STOS token from/to Ethereum network and Stratos Mainn
 
 ## From Gate.io to Stratos Network
 
-- <a href="https://www.thestratos.org/download.html" target="_blank">Download</a> the latest version of the Stratos Wallet. If you already have the Stratos Wallet installed a long time ago, please uninstall it and get the latest version.
+- <a href="https://www.thestratos.org/stratos-network-wallet" target="_blank">Download</a> the latest version of the Stratos Wallet. If you already have the Stratos Wallet installed a long time ago, please uninstall it and get the latest version.
 
 - Import an existing wallet address or generate a new one. To generate a new one, click `Import` and the click `Here` button to generate a new mnemonic phrase.
 
