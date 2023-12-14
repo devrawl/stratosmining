@@ -78,8 +78,7 @@ nav:
     - What is Stratos?: what-is-stratos-crypto.md
     - Current Status: stratos-current-status.md
     - Frequently Asked Questions: stratos-frequently-asked-questions.md
-    - Stratos Mining Nodes: stratos-mining-nodes.md
-    - Mining Starting Point: mining-starting-point.md
+    - Stratos Miner Handbook: stratos-miner-handbook.md
   - HowTo:
     - Setup a SDS Node: howto-install-stratos-sds-node.md
     - Setup a Full-Chain Node: howto-install-stratos-full-chain-validator-node.md
