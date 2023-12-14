@@ -10,6 +10,7 @@ description: Starting point for your journey as a Stratos Node Operator. What ar
 
     - This article is NOT part of the official documentation.
     - Think of this as an extended product review written by a fellow node operator after running nodes in mainnet for about two months.
+    - Values and predictions used in this article were consistent with the factual circumstances at the time of its writing. If you read this at a much later time, you might get different and unexpected results in regards of incurring costs, rewards amount etc.
 
 ## Where to start?
 
@@ -259,3 +260,33 @@ But that isn't as bad as it sounds because:
 2. The cost of storage on Stratos network is low anyway. So even if you have stored, let's say 1TB of data and then lost it. The cost of storing 1TB on Stratos network is under $10 so even if you get slashed that amount, you surely had made more than that from rewards.
 
 Bottom line, it's very hard to get your 1600 STOS deposit slashed, unless your node does absolutely everything backwards.
+
+---
+
+<br>
+
+## Official links
+
+- Official documentation for setting up a node: <br><a href="https://docs.thestratos.org/docs-resource-node/setup-and-run-a-sds-resource-node/" target="_blank">https://docs.thestratos.org/...</a>
+<br>
+<br>
+
+- Official Stratos website: <br><a href="https://www.thestratos.org/" target="_blank">https://thestratos.org/</a>
+<br>
+<br>
+
+- SDS GitHub releases: <br><a href="https://github.com/stratosnet/sds/releases" target="_blank">https://github.com/stratosnet/...</a>
+<br>
+<br>
+
+- Native chain explorer: <br><a href="https://explorer.thestratos.org/stratos" target="_blank">https://explorer.thestratos.org/stratos</a>
+<br>
+<br>
+
+- EVM chain explorer: <br><a href="https://web3-explorer.thestratos.org/" target="_blank">https://web3-explorer.thestratos.org/</a>
+<br>
+<br>
+
+---
+
+<br>
