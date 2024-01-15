@@ -3,6 +3,11 @@ title: Bin Zhu on QuickSwap Twitter Space 12.01.2024
 author: DevRawl
 description: Bin Zhu speaking about Stratos on QuickSwap Twitter Space on January 12th, 2024.
 ---
+# Bin Zhu speaks about Stratos on QuickSwap X Space, January 12th, 2024
+
+[<a href="https://twitter.com/i/spaces/1kvJpvLYZoOKE" target="_blank">Click</a>] to listen. (Starts at 2:13:50).
+
+<br>
 
 <claire>Host</claire>
 
