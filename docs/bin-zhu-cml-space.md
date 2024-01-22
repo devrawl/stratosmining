@@ -6,8 +6,9 @@ description: Bin Zhu speaking about Stratos on CoinMarketLeague Twitter Space on
 # Bin Zhu speaks on <i>Speculate Podcast EP.5 with Stratos & BullRingCrypto & CoinMarketLeague</i>, January 21th, 2024
 
 !!! info
-		- [<a href="https://twitter.com/i/spaces/1vOxwjDylNVJB" target="_blank">Click</a>] to listen the original audi.
-		- Due to its length, AI tools were utilized to create the transcript. The wording may differ from the original audio, but the meaning remains the same.
+
+	- [<a href="https://twitter.com/i/spaces/1vOxwjDylNVJB" target="_blank">Click</a>] to listen the original audi.
+	- Due to its length, AI tools were utilized to create the transcript. The wording may differ from the original audio, but the meaning remains the same.
 
 <br>
 
