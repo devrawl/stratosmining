@@ -3,7 +3,7 @@ title: Bin Zhu on CoinMarketLeague Twitter Space 21.01.2024
 author: DevRawl
 description: Bin Zhu speaking about Stratos on CoinMarketLeague Twitter Space on January 21th, 2024.
 ---
-# Bin Zhu speaks on <i>Speculate Podcast EP.5 with Stratos & BullRingCrypto & CoinMarketLeague</i>, January 12th, 2024
+# Bin Zhu speaks on <i>Speculate Podcast EP.5 with Stratos & BullRingCrypto & CoinMarketLeague</i>, January 21th, 2024
 
 !!! info
 		- [<a href="https://twitter.com/i/spaces/1vOxwjDylNVJB" target="_blank">Click</a>] to listen the original audi.
