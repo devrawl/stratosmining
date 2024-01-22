@@ -7,7 +7,7 @@ description: Bin Zhu speaking about Stratos on CoinMarketLeague Twitter Space on
 
 !!! info
 
-	- [<a href="https://twitter.com/i/spaces/1vOxwjDylNVJB" target="_blank">Click</a>] to listen the original audi.
+	- [<a href="https://twitter.com/i/spaces/1vOxwjDylNVJB" target="_blank">Click</a>] to listen the original audio.
 	- Due to its length, AI tools were utilized to create the transcript. The wording may differ from the original audio, but the meaning remains the same.
 
 <br>
