@@ -36,7 +36,7 @@ description: Stratos Decentralized Network Frequently Asked Questions. Is there 
     
     **The real Stratos telegram channels:** 
     
-    - <a href="https://t.me/StratosCommunity" target="_blank">StratosCommunity</a>
+    - <a href="https://t.me/StratosOfficial" target="_blank">StratosOfficial</a>
     - <a href="https://t.me/Stratos_announcement" target="_blank">Stratos\_announcement</a>
     - <a href="https://t.me/Stratostrade" target="_blank">Stratostrade</a> (unofficial but supported by the team)
 

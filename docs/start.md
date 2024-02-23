@@ -16,7 +16,7 @@ description: Tutorials and guides for node operators on the Stratos Decentralize
 
     - This is a community operated website and it’s not, in any way, endorsed by the official Stratos project.
     - The content on this website is written from a node operator experience and it's intended to help other node operators in their journey.
-    - For any questions, you can find me on the official <a href="https://discord.com/invite/tpQGpC2nMh" target="_blank">Discord</a> or <a href="https://t.me/StratosCommunity" target="_blank">Telegram</a>.
+    - For any questions, you can find me on the official <a href="https://discord.com/invite/tpQGpC2nMh" target="_blank">Discord</a> or <a href="https://t.me/StratosOfficial" target="_blank">Telegram</a>.
 
 ## Quick Start
 
