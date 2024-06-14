@@ -4,7 +4,7 @@ author: DevRawl
 description: HowTo install a Full-Chain node on Stratos Network and configure it as a Blockchain Validator.
 ---
 
-<small> Last update: September 21, 2023</small>
+<small> Last update: June 15, 2024</small>
 
 ### Requirements
 
@@ -52,7 +52,7 @@ Run these commands, one by one, from a terminal, logged in as a regular user:
 
 
 ```
-wget https://github.com/stratosnet/stratos-chain/releases/download/v0.11.2/stchaind -P $HOME/bin
+wget https://github.com/stratosnet/stratos-chain/releases/download/v0.12.0/stchaind -P $HOME/bin
 chmod +x $HOME/bin/stchaind
 ```
 
@@ -62,7 +62,7 @@ Check files for integrity:
 md5sum $HOME/bin/stchaind
 
 # Expected response:
-# c3e55667fd2eb0a345dde80a56068a6a  /home/your-username/bin/stchaind
+# 166f4d290741ede24ec37071ed982591  /home/your-username/bin/stchaind
 ```
 
 Verify installation:
@@ -71,7 +71,7 @@ Verify installation:
 stchaind version
 
 # Expected response:
-# v0.11.2
+# v0.12.0
 ```
 
 ---

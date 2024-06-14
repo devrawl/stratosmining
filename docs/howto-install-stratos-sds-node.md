@@ -4,7 +4,7 @@ author: DevRawl
 description: HowTo install and run a Stratos Decentralized Resource Node on Mesos Testnet and Mainnet.
 ---
 
-<small> Last update: October 27, 2023</small>
+<small> Last update: June 15, 2024</small>
 
 
 ## Rquirements
@@ -28,7 +28,7 @@ Running a SDS node requires the following resources:
 - <b>Software (tested version)</b>
 
     * Ubuntu 20.04
-    * Go 1.19 linux/amd64 
+    * Go 1.19-1.22 linux/amd64 
 
 !!! warning
 
@@ -53,7 +53,7 @@ echo 'export PATH="$HOME/bin:$PATH"' >> ~/.profile
 source ~/.profile
 ```
 
-Install go lang version 1.19. Currently, the compilation will fail with newer versions of go.
+Install go lang version 1.19 - 1.22. Currently, the compilation will fail with newer versions of go.
 
 Check if you already have go installed:
 
@@ -72,14 +72,14 @@ sudo rm -rf /usr/local/go
 Install go 1.19:
 
 ```sh
-wget https://go.dev/dl/go1.19.12.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.19.12.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.22.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.22.3.linux-amd64.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
 source ~/.profile
 go version
 ```
 
-You should get `go version go1.19.12 linux/amd64`.
+You should get `go version go1.22.3 linux/amd64`.
 
 ---
 
@@ -91,7 +91,7 @@ Continue with these commands in terminal:
 cd $HOME
 git clone https://github.com/stratosnet/sds.git
 cd sds
-git checkout tags/v0.11.9
+git checkout tags/v0.12.0
 make build
 cp target/ppd $HOME/bin
 ```
@@ -105,7 +105,7 @@ ppd version
 should return:
 
 !!! info
-    v0.11.9
+    v0.12.0
 
 ---
 
@@ -123,10 +123,6 @@ ppd config -w -p
 This will start the configuration tool
 
 !!! info
-    Enter password:  <span style="color:cyan">enter a password for the P2P key</span>
-    
-    Enter password again: <span style="color:cyan">re-enter a password for the P2P key</span>
-    
     Enter wallet nickname: <span style="color:cyan">enter a wallet name (wallet1 for example)</span>
     
     Enter password: <span style="color:cyan">enter a password for the wallet</span>
@@ -138,6 +134,12 @@ This will start the configuration tool
     input hd-path for the account <span style="color:cyan">press enter</span>
     
     save wallet password to config file: <span style="color:cyan">press Y and enter</span>
+
+    Enter password:  <span style="color:cyan">enter a password for the P2P key</span>
+    
+    Enter password again: <span style="color:cyan">re-enter a password for the P2P key</span>
+
+    How should the p2p key be generated? <span style="color:cyan">press 3 and enter</span>    
 
 Result:
 !!! note ""
@@ -166,6 +168,13 @@ Make the following edits:
 # IP address of the node. Eg: "127.0.0.1"
 network_address = 'external.ip.from.curl.ifconfig'
 
+```
+
+Enter here the wallet that will be receiving the rewards (could be the same as node wallet):
+
+```sh
+# Address for receiving reward. Eg: "stxxxxxxxxxxxxxxxxxxxxxxxxxx"
+beneficiary_address = ''
 ```
 
 Save the file by pressing CTRL + X , then Y and Enter.
