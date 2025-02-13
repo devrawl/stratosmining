@@ -52,7 +52,7 @@ Run these commands, one by one, from a terminal, logged in as a regular user:
 
 
 ```
-wget https://github.com/stratosnet/stratos-chain/releases/download/v0.12.1/stchaind -P $HOME/bin
+wget https://github.com/stratosnet/stratos-chain/releases/download/v0.12.2/stchaind -P $HOME/bin
 chmod +x $HOME/bin/stchaind
 ```
 
@@ -62,7 +62,7 @@ Check files for integrity:
 md5sum $HOME/bin/stchaind
 
 # Expected response:
-# 166f4d290741ede24ec37071ed982591  /home/your-username/bin/stchaind
+# e9c0f2a36ed91e10eeeeb84c00e2e454  /home/your-username/bin/stchaind
 ```
 
 Verify installation:
@@ -71,7 +71,7 @@ Verify installation:
 stchaind version
 
 # Expected response:
-# v0.12.1
+# v0.12.2
 ```
 
 ---
